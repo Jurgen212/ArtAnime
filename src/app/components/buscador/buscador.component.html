@@ -1,0 +1,137 @@
+
+<div class="app-container">
+  <h1>Productos de colección Aire</h1>
+    <hr>
+
+
+ 
+    <div class="app-content">
+      
+      <div class="products-area-wrapper tableView">
+        <div class="products-header">
+          <div class="product-cell image">Productos</div>
+          <div class="product-cell status-cell">Estado</div>
+          <div class="product-cell stock">Cantidad</div>
+          <div class="product-cell price">Precio</div>
+          <div class="product-cell price"></div>
+        </div>
+        <!--PRODUCTOS-->
+
+      <div class="contenedor-imagen">
+        <div class="products-row" *ngFor="let item of lista_aire">
+          <div class="product-cell image">
+            <img
+              [src]="item.funkoImage"/>
+            <span>{{ item.name }}</span>
+          </div>
+          <div class="product-cell status-cell">
+            <span class="cell-label">Status:</span>
+            <span class="status active">{{ item.stock | disponibles }}</span>
+          </div>
+          <div class="product-cell stock">
+            <span class="cell-label">Stock:</span>{{ item.stock }}
+          </div>
+          <div class="product-cell price">
+            <span class="cell-label">Price:</span>${{ item.price }}
+          </div>
+          <div class="product-cell price">
+            <span class="cell-label"> </span>
+            <button class="draw meet" (click)="seleccionado( item.name )">Seleccionar</button>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+
+
+
+    <!-- Coleccion tierra----------- -->
+
+    <h1>Productos de colección Tierra</h1>
+      <hr>
+
+    <div class="app-content">
+      
+      <div class="products-area-wrapper tableView">
+        <div class="products-header">
+          <div class="product-cell image">Productos</div>
+          <div class="product-cell status-cell">Estado</div>
+          <div class="product-cell stock">Cantidad</div>
+          <div class="product-cell price">Precio</div>
+          <div class="product-cell price"></div>
+        </div>
+        <!--PRODUCTOS-->
+
+      <div class="contenedor-imagen">
+        <div class="products-row" *ngFor="let item of lista_tierra">
+          <div class="product-cell image">
+            <img
+              [src]="item.funkoImage"/>
+            <span>{{ item.name }}</span>
+          </div>
+          <div class="product-cell status-cell">
+            <span class="cell-label">Status:</span>
+            <span class="status active">{{ item.stock | disponibles }}</span>
+          </div>
+          <div class="product-cell stock">
+            <span class="cell-label">Stock:</span>{{ item.stock }}
+          </div>
+          <div class="product-cell price">
+            <span class="cell-label">Price:</span>${{ item.price }}
+          </div>
+          <div class="product-cell price">
+            <span class="cell-label"> </span>
+            <button class="draw meet" (click)="seleccionado( item.name )">Seleccionar</button>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+
+
+
+     <!-- Coleccion Agua----------- -->
+
+
+     <h1>Productos de colección Agua</h1>
+      <hr>
+     <div class="app-content">
+      
+      <div class="products-area-wrapper tableView">
+        <div class="products-header">
+          <div class="product-cell image">Productos</div>
+          <div class="product-cell status-cell">Estado</div>
+          <div class="product-cell stock">Cantidad</div>
+          <div class="product-cell price">Precio</div>
+          <div class="product-cell price"></div>
+        </div>
+        <!--PRODUCTOS-->
+      <div class="contenedor-imagen">
+        <div class="products-row" *ngFor="let item of lista_agua">
+          <div class="product-cell image">
+            <img
+              [src]="item.funkoImage"/>
+            <span>{{ item.name }}</span>
+          </div>
+          <div class="product-cell status-cell">
+            <span class="cell-label">Status:</span>
+            <span class="status active">{{ item.stock | disponibles }}</span>
+          </div>
+          <div class="product-cell stock">
+            <span class="cell-label">Stock:</span>{{ item.stock }}
+          </div>
+          <div class="product-cell price">
+            <span class="cell-label">Price:</span>${{ item.price }}
+          </div>
+          <div class="product-cell price">
+            <span class="cell-label"> </span>
+            <button class="draw meet" (click)="seleccionado( item.name )">Seleccionar</button>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  

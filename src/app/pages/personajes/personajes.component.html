@@ -1,0 +1,24 @@
+<div class="div_buscar" 
+     [formGroup]="miFormulario"
+     (ngSubmit)="buscar()">
+
+    <input  class="buscar_input" 
+            placeholder="Buscar personajes"
+            formControlName="name">
+
+        <hr>
+    <button class="btn btn-secondary"
+            (click)="buscar()">Buscar</button>
+    
+</div>
+
+<hr>
+<div *ngIf="personajes.length != 0">
+    <app-tarjetas [personajes]="personajes"></app-tarjetas>
+</div>
+
+<div *ngIf="advertencia">
+    <p class="advertencia">No se encontraron resultados</p>
+</div>
+
+    

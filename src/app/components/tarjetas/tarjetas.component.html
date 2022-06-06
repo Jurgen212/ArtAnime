@@ -1,0 +1,20 @@
+<div class="contenedor">
+    
+    
+    <div    class="tarjeta" *ngFor="let item of productos, let i = index">
+
+        <div class="tarjeta-bg" [ngStyle]="{'background-image': 'url(' + ponerImagenFondoaTarjeta(i) + ')'}">
+
+            <a (click)="consola(i)">
+                <p class="tarjeta_name">{{ item.name }}</p>
+                <img [src]= "item.funkoImage"> 
+    
+                <p class="tarjeta_price"> ${{ item.nCa }}</p>
+                <p class="info"> Cop/ Cu</p>
+                <p class="info" *ngIf="conocerSiHayDescuento(i)">PROMOCION!!</p>
+                <p class="tarjeta_stock">DISPONIBLES {{ item.stock }}</p>
+            </a>
+
+        </div>    
+    </div>
+</div>

@@ -1,0 +1,77 @@
+
+<img    *ngIf="mostrar_chulo"
+class="chulo-style"
+src="assets/verificaciones/chulo.png">
+
+
+<div class="container" *ngIf="hay_data" >
+
+  <div class="imagen-container">
+
+    <img    src="/assets/login-img/volver.png" 
+            class="volver-img"
+            [routerLink]="path_anterior">
+
+    <p class="nombre">{{ funko_mostrar.name }}</p>
+    <img [src]="funko_mostrar.funkoImage">
+    <div class="nombre-container">
+      <div class="contenedor-nombre-boton">
+
+        <span *ngIf="yaExisteEnLocal">Este elemento ya está en el carrito</span>
+        <button (click)="anadirAlCarrito(funko_mostrar)">Añadir al carrito</button>
+
+      </div>
+      
+      <p class="precio" *ngIf="!conocerPromocion()">Precio ${{ funko_mostrar.nCa }}</p>
+      <p class="precio" *ngIf="conocerPromocion()">Antes ${{ funko_mostrar.price }} ahora ${{ funko_mostrar.nCa }}</p>
+
+    </div>
+
+    
+  </div>
+
+  <div class="info-container">
+    <div class="espacio"></div>
+
+    <div class="informacion">
+      <div class="informacion-info">Información</div>
+      <div class="informacion-cell">Material: {{ funko_mostrar.material }}</div>
+      <div class="informacion-cell">Disponibles: {{ funko_mostrar.stock }}</div>
+      <div class="informacion-cell">Colección: {{ funko_mostrar.coleccion }}</div>
+      <div class="informacion-cell">Descripción: {{ funko_mostrar.des }}</div>
+      <diV class="informacion-cell" *ngIf="conocerPromocion()">Este producto cuenta con un descuento del {{ porcentajeDescuento }}%</diV>
+      <div class="informacion-cell" *ngIf="calificacion == 0">Este producto aún no ha sido calificado</div>
+      <div class="informacion-cell" *ngIf="calificacion != 0">Calificacion: {{ calificacion }}/5</div>
+
+
+
+      <div class="informacion-cell contenedor-calificacion">
+        <p>Añadir calificacion:</p>
+
+        <form [formGroup]="miFormulario">
+          <select name="calification" id="calification-box" formControlName="opcionSeleccionada">
+            <option value="1" class="option" [ngValue]="1">1/5</option>
+            <option value="2" class="option" [ngValue]="2">2/5</option>
+            <option value="3" class="option" [ngValue]="3">3/5</option>
+            <option value="4" class="option" [ngValue]="4">4/5</option>
+            <option value="5" class="option" [ngValue]="5">5/5</option>
+          </select>
+          <p *ngIf="isNullCalificacion">Por favor seleccione una calificacion antes de enviar</p>
+        </form>
+
+        <button class="send-calification"
+                (click)="enviarCalificacion()">Enviar calificacion</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="container" *ngIf="!hay_data">
+  <span>Por favor seleccione un funko <a routerLink="/home/">Volver</a></span>
+</div>
+
+
+
+
+  

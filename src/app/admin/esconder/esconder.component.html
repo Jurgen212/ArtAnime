@@ -1,0 +1,34 @@
+
+<div class="container">
+  
+<div class="cabecera">
+    <img    src="/assets/login-img/volver.png" 
+        class="flecha_volver"
+        height="20" 
+        width="20"
+        routerLink="/admin/principal"> 
+        
+    <div>
+        <button routerLink="/admin/ocultos">Ver productos reservados y agotados</button>
+    </div>
+</div>
+
+    <div *ngIf="buscando">
+        <app-buscador (id_enviar)="recibiendo_id( $event )"></app-buscador>
+    </div>
+
+    <div *ngIf="!buscando">
+        
+        <div class = "contenedor">
+
+            <div class = "alerta">
+
+                <p>¿Estas seguro de ocultar este elemento?</p>
+                <button class = "aceptar_Ocultar" (click)="aceptar()" >Aceptar</button>
+                <button class = "cancelar_Ocultar" (click)="cancelar()">Cancelar</button>
+
+            </div>  
+
+        </div>
+    </div>
+</div>  

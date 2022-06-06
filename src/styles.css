@@ -1,0 +1,15 @@
+app-shared{
+    position: relative;
+    top: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+app-tarjetas{
+    width: 100%;
+}
+
+

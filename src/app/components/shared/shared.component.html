@@ -1,0 +1,18 @@
+
+  <nav class="navbar navbar-expand navbar-light" >
+      <a class="navbar-brand " href="#"><img [src]="title.img" ></a>
+
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav my-2 my-lg-0" id="products_contain">
+
+          <!-- NG for que itera cada item del nav -->
+          <a  class="nav-item nav-link active item" 
+              *ngFor="let item of opciones"
+              [routerLink]="item.path">
+              {{ item.name }}
+          </a>
+
+        </div>
+      </div>
+  </nav>
+

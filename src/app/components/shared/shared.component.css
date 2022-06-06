@@ -1,0 +1,137 @@
+
+nav.navbar {
+   background-color: #8DE6CD;
+   margin: 0;
+   width: 100%;
+   border-bottom: .1px solid black;
+   margin-bottom: 20px;
+   padding: 50px;
+   
+}
+
+
+
+
+.item:hover{
+   border-bottom: 1px solid beige;
+}
+
+/* Dispositivos muy grandes */
+@media all and (min-width: 1000px ) {
+
+   nav.navbar{
+      height: 70px;
+   }
+
+   img{
+      width:   150px; 
+      padding-left: 20px;
+   }
+
+   
+   a{
+      font-size: 20px;
+      font-family: 'Times New Roman', Times, serif;
+   }
+
+
+   /* Contenedor de los elementos del nav bar */
+   #navbarNavAltMarkup{
+      margin-left: 5%;
+      width: 100%;
+      }
+   
+   /* Separacion entre elementos del nav bar */
+   #products_contain{
+      width: 95%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+   }
+
+}
+
+
+
+
+/* Dispositivos medianos */
+@media all and (min-width: 620px) and ( max-width: 1000px ) {
+   nav.navbar{
+      height: 220px;
+   }
+
+   img{
+      width:   150px; 
+   }
+
+   nav{
+      padding-top: 10px;
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+   }
+   
+   a{
+      font-size: 16px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      
+   }
+   
+   /* Contenedor de los elementos del nav bar */
+   #navbarNavAltMarkup{
+   margin-left: 5%;
+   width: 100%;
+   }
+   
+   /* Separacion entre elementos del nav bar */
+   #products_contain{
+      width: 90%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      
+   }
+}
+
+
+/* Dispositivos muy pequeños */
+
+@media all and (min-width: 0px) and ( max-width: 620px ) {
+   
+   nav.navbar{
+      height: 420px;
+   }
+
+   img{
+      width:   150px; 
+   }
+
+   nav{
+      padding-top: 0px;
+      display: flex;
+      flex-direction: column;
+   }
+   
+   
+   /* Contenedor de los elementos del nav bar */
+   #navbarNavAltMarkup{
+   margin-left: 5%;
+   width: 100%;
+   }
+
+   
+   
+   /* Separacion entre elementos del nav bar */
+   #products_contain{
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+   }
+
+
+
+}
+
+
+

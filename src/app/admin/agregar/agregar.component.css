@@ -1,0 +1,146 @@
+body{
+    overflow-x: hidden;
+}
+.contenedor{
+    text-align: center;
+    background-color: #8de6cd;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.form-registro{
+    width: 400px;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    font-family: 'Times New Roman', Times, serif;
+    border: 2px solid #000000;
+    box-sizing: border-box;
+    box-shadow: 7px 13px 37px #000;
+}
+
+.controls{
+    width: 100%;
+    height: 40px;
+    border-radius: 6px;
+    margin-bottom: 30px;
+    border: 1px solid black;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+
+}
+
+.boton-2{
+    display: none;
+}
+
+
+.form-registro h2{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.form-registro img{
+    float: left;
+    margin-bottom: 10px;
+}
+
+.insertar{
+    width: 343px;
+    height: 35px;
+    font-weight: 600;
+    font-size: 20px;
+    border-radius: 6px;
+    background-color: black;
+    color: #ffffff;
+    cursor: pointer;
+    text-align: center;
+}
+
+.chulo-style{
+    position: absolute;
+    width: 20%;
+    top: 50%;
+    left: 40%;
+}
+
+
+span{
+    color: red;
+}
+
+img:hover {
+    -webkit-transform:scale(1.2);
+    transform:  scale(1.2);
+    transition-duration: .5s;
+    cursor: pointer;
+}
+
+
+
+@media all and (min-width: 0px) and ( max-width: 1200px ) {
+  
+
+    .naruto-img{
+        display: none;
+    }
+
+    .contenedor{
+        justify-content: space-evenly;   
+    }
+ }
+
+
+
+ @media all and (min-width: 0px) and ( max-width: 900px ) {
+  
+
+    .pokemon-img{
+        display: none;
+    }
+
+    .contenedor{
+        justify-content: space-evenly;   
+    }
+
+
+    button{
+        width: 100px;
+    }
+ }
+
+
+ @media all and (min-width: 0px) and ( max-width: 500px ) {
+    
+    .contenedor{
+        width: 100%;
+    }
+
+    .form-registro{
+        width: 95%;
+    }   
+
+
+.boton-2{
+    display: flex;
+    width: 90%;
+    height: 35px;
+    font-weight: 600;
+    font-size: 20px;
+    border-radius: 6px;
+    background-color: black;
+    color: #ffffff;
+    cursor: pointer;
+    text-align: center;
+}
+
+    button{
+        display: none;
+    }
+
+
+ }

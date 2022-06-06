@@ -1,0 +1,52 @@
+
+<div class="container">
+    <img    src="/assets/login-img/volver.png" 
+            class="flecha_volver"
+            height="20" 
+            width="20"
+            routerLink="/admin/esconder"> 
+</div>
+
+
+<h1>Productos ocultos al publico y reservados</h1>
+      <hr>
+     <div class="app-content">
+      
+      <div class="products-area-wrapper tableView">
+        <div class="products-header">
+          <div class="product-cell image">Productos</div>
+          <div class="product-cell status-cell">Estado</div>
+          <div class="product-cell stock">Cantidad</div>
+          <div class="product-cell price">Precio</div>
+          <div class="product-cell ">Añadir a coleccion</div>
+          <div class="product-cell price"></div>
+        </div>
+        <!--PRODUCTOS-->
+      <div class="contenedor-imagen">
+        <div class="products-row" *ngFor="let item of lista_ocultos">
+          <div class="product-cell image">
+            <img
+              [src]="item.funkoImage"/>
+            <span>{{ item.name }}</span>
+          </div>
+          <div class="product-cell status-cell">
+            <span class="cell-label">Status:</span>
+            <span class="status active"> Oculto </span>
+          </div>
+          <div class="product-cell stock">
+            <span class="cell-label">Stock:</span>{{ item.stock }}
+          </div>
+          <div class="product-cell price">
+            <span class="cell-label">Price:</span>${{ item.price }}
+          </div>
+          <div class="product-cell price">
+            <span class="cell-label"> </span>
+            <button class="draw meet" (click)="seleccionado( item._id, tierra )">Tierra</button>
+            <button class="draw meet" (click)="seleccionado( item._id, agua )">Agua</button>
+            <button class="draw meet" (click)="seleccionado( item._id, aire )">Aire</button>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+

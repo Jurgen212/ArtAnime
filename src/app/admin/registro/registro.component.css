@@ -1,0 +1,63 @@
+
+table, th, td {
+    border: 1px white;
+    text-align: center;
+}
+
+td{
+    width: 12%;
+    height: 100px;
+    border-bottom: 1px solid bisque;
+}
+
+img{
+    max-width: 50%;
+    max-height: 100%;
+}
+
+.flecha_volver{
+    width: 40px;
+    height: 40px;
+}
+
+.flecha_volver:hover {
+    -webkit-transform:scale(1.2);
+    transform:  scale(1.2);
+    transition-duration: .5s;
+    cursor: pointer;
+}
+
+.stock_contain{
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+}
+
+.banda_1{
+    position: relative;
+    margin-top: 20px;
+    top: 10px;
+    width: 100%;
+    height: 30px;
+    background-color: #8DE6CD;
+    margin-bottom: 30px;
+}
+
+.banda_2{
+    position: relative;
+    margin-top: 20px;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    background-color: #8DE6CD;
+}
+
+.fecha{
+    font-size: 10px;
+}
+
+.tabla_principal{
+    font-size: 15px;
+}

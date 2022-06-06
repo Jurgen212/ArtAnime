@@ -1,0 +1,39 @@
+
+.container{
+    margin-top: 100px;
+}
+h4{
+    font-size: 40px;
+}
+
+div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    max-width: 1000px;
+}
+img{
+    border: 2px solid black;
+    margin-top: 40px;
+    max-width: 80%;
+    cursor: pointer;
+}
+
+
+
+img:hover {
+    -webkit-transform:scale(1.1);
+    transform:  scale(1.1);
+    transition-duration: .2s;
+}
+
+
+
+@media all and (min-width: 0px) and ( max-width: 1000px ) {
+    
+    h4{
+        font-size: 20px;
+    }
+ }

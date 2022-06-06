@@ -1,0 +1,125 @@
+
+.contenedor{
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+
+.tarjeta1{            
+    color: white;
+    width: 20vw;
+    height: 60vh;
+    font-family: 'Times New Roman', Times, serif;
+    background-image: url('/assets/tarjetas-colecciones/tierra.png');
+    border: 1px solid #000000;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+
+.tarjeta1 img{
+    width: 90%; 
+    position: relative;
+    right: -30%;
+    bottom: -50%;
+    cursor: pointer; 
+}
+
+
+.tarjeta2 img{
+    width: 90%; 
+    position: relative;
+    right: -30%;
+    bottom: -50%;   
+    cursor: pointer; 
+
+}
+
+.tarjeta3 img{
+    width: 90%; 
+    position: relative;
+    right: -30%;
+    bottom: -50%;
+    cursor: pointer; 
+}
+
+.tarjeta2{
+    color: white;
+    width: 20vw;
+    height: 60vh;
+    font-family: 'Times New Roman', Times, serif;
+    background-image: url('/assets/tarjetas-colecciones/agua.png');
+    border: 1px solid #000000;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.tarjeta3{
+    color: white;
+    width: 20vw;
+    height: 60vh;
+    font-family: 'Times New Roman', Times, serif;
+    background-image: url('/assets/tarjetas-colecciones/aire2.png');
+    background-size: cover;
+    border: 1px solid #000000;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.linea_final{
+    width: 70%;
+    margin-top: 5%;
+    margin-left: 15%;
+}
+
+/* Animaciones */
+
+img:hover {
+    -webkit-transform:scale(1.7);
+    transform:  scale(1.7);
+    transition-duration: .5s;
+}
+
+
+@media all and (min-width: 0px) and ( max-width: 1000px ) {
+
+    .contenedor{
+        flex-direction: column;
+        height: 1500px;
+    }
+
+
+    .tarjeta1, .tarjeta2, .tarjeta3{
+        width: 35%;
+        margin-bottom: 40px;
+    }
+}
+
+
+@media all and (min-width: 0px) and ( max-width: 600px ) {
+
+    .tarjeta1, .tarjeta2, .tarjeta3{
+        width: 50%;
+    }
+}
+
+
+@media all and (min-width: 0px) and ( max-width: 400px ) {
+
+    .tarjeta1, .tarjeta2, .tarjeta3{
+        width: 70%;
+    }
+}
+
+@media all and (min-width: 0px) and ( max-width: 300px ) {
+
+    .tarjeta1, .tarjeta2, .tarjeta3{
+        width: 90%;
+    }
+}
+

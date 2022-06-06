@@ -1,0 +1,40 @@
+
+<footer>
+    <!-- Contenedor con los 3 bloques de color rojo, blanco y azul -->
+    <div class="contenedor-principal-1">
+
+        <div class="contenedor-1-1">
+            <p class="contenedor-1-1-title" >ARTANIME</p>
+
+            <p class="contenedor-1-1-body">Bienvenidos a la tienda de figuras más grande del país :D, productos importados directamente desde Asia. <br>Los mejores precios en los envíos</p>
+        </div>
+
+        <div class="contenedor-1-2">
+
+            <p class="contenedor-1-2-title"></p>
+            <p class="contenedor-1-2-body">
+        </div>
+
+        <div class="contenedor-1-3">
+            <p class="contenedor-1-2-title">Contáctanos</p>
+            <p><br> Jurgen Sanclemente <a href="https://github.com/Jurgen212" target="_blank"> <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png"> </a><br>Nicolas Ramirez  <a href="https://github.com/Trompitas" target="_blank"><img  src="https://cdn-icons-png.flaticon.com/512/25/25231.png" ></a> <br>Juan Pablo Tascon <br>Mauricio Bonilla <br>Nicolas Gonzales</p>
+        </div>
+
+    </div>
+
+
+    <!-- Contenedor de la barra que hay abajo de la pagina -->
+    <div class="contenedor-principal-2">
+
+        <div class=" contenedor-2-1">
+            <p>2022 ARTANIME - Unicentro</p>
+        </div>
+
+        <div class="contenedor-2-2">
+            <a  *ngFor="let item of opciones"
+                [routerLink]="item.path">
+                {{ item.name }}
+            </a>
+        </div>
+    </div>
+</footer>

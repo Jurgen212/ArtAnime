@@ -1,0 +1,65 @@
+
+<div class="container">
+
+    <img    class="flecha" src="/assets/login-img/volver.png" 
+                    height="40" 
+                    width="40"
+                    routerLink="/home/main">
+
+
+    <div class="barra_1">.</div>
+
+    <img class="titulo" src="assets/title_principal.png">
+
+    <p>Unicentro Cali</p>
+    <p>Cra. 100 #5-169</p><br>
+
+    <table style="width: 90%;">
+        <tr>
+            <th>Facturar a</th>
+            <th># de Factura</th>
+        </tr>
+        <tr>
+            <td>{{ nombrePersona }}</td>
+            <td>{{ numeroFactura }}</td>
+        </tr>
+    </table><br>
+
+    <h2>Facturación</h2>
+
+    <table style="width: 90%;">
+        <tr>
+            <th>Cantidad</th>
+            <th>Nombre</th>
+            <th>Precio</th>
+        </tr>
+
+        
+            <tr *ngFor="let item of mostrarFunkosComprar">
+                <td>{{ item.cantidad }}</td>
+                <td>{{ item.nombre }}</td>
+                <td>{{ item.precio }}</td>
+            </tr>
+        
+    </table>
+
+    <table style="width: 159%;">
+        <tr>
+            <td>Costos envio: ${{ tipoEnvio }}</td>
+        </tr>
+        <tr>
+            <th>Total</th>
+        </tr>
+        <tr>
+            <td>${{ generarTotal()}}</td>
+        </tr>
+    </table><br>
+
+    <h3>Método de pago</h3>
+    <p></p>
+
+
+    <div class="barra_2">.</div>
+
+    <button type="button" onclick="javascript:window.print()" style="margin-top: 20px; border-radius: 5px; background-color: antiquewhite; border: none; border: 1px solid bisque;">Imprimir</button>
+</div>

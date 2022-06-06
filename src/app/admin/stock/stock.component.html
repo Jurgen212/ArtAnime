@@ -1,0 +1,45 @@
+
+
+
+<div class="container">
+    
+    <img    src="/assets/login-img/volver.png" 
+                    height="20" 
+                    width="20"
+                    routerLink="/admin/principal"
+                    class="flecha_volver">
+
+    <div class="banda_1">.</div>
+
+    <h1>Art Anime</h1>
+            
+    <p>Unicentro Cali</p>
+            
+    <h2>Cantidades de los productos</h2>
+    <div class="stock_contain">
+
+        <table style="width: 90%;">
+            <tr>
+                <th>Cantidad</th>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Imagen</th>
+                <th>Colección</th>
+                <th>Id</th>
+                <th>Material</th>
+            </tr>
+            <tr *ngFor="let item of arregloFiguras; let i = index" >
+                <td [ngStyle]="{ 'color': colorFigurasAgotadas( i ) }">{{ item. stock }}</td>
+                <td [ngStyle]="{ 'color': colorFigurasAgotadas( i ) }">{{ item.name }}</td>
+                <td [ngStyle]="{ 'color': colorFigurasAgotadas( i ) }">{{ item.price }}</td>
+                <td><img [src]="item.funkoImage"></td>
+                <td>{{ item.coleccion }}</td>
+                <td>{{ item._id }}</td>
+                <td>{{ item.material }}</td>
+            </tr>
+        </table>
+
+        <div class="banda_2">.</div>
+    </div>
+
+</div>
