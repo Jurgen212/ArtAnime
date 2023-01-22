@@ -1,280 +1,85 @@
 
 /* Estilos de el contenedor mas grande del footer, aqui estamos asignando una forma en columna para los 2 contenedores grandes */
 footer{
-    margin-top: 150px;
+
+    border: 1px solid black;
+    margin-top: 50px;
     width: 100%;
-    height: 720px;
+    height: 500px;
 
     display: flex;
     flex-direction: column;
+
 }
 
-img{
-    width: 20px;
-    margin-left: 10px;
-    cursor: pointer;
-}
-
-p{
-    font-family: 'Times New Roman', Times, serif;
-}
-
-img:hover {
-    -webkit-transform:scale(1.2);
-    transform:  scale(1.2);
-    transition-duration: .5s;
-    cursor: pointer;
-}
-
-/* Contenedor grande 1 del footer, el que contiene 3 cuadros de colores, que iran en forma de row */
-
-.contenedor-principal-1{
-    width: 100%;
-    height: 625px;
-
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-/* Pequeños contenedores del contenedor grande 1, son los 3 bloques, el rojo el blanco y el azul */
-
-.contenedor-1-1{
-    background-color: #8DE6CD;
-    width: 42%;
-    height: 100%;
-
-    display: flex;
-    flex-direction: column;
-    padding: 200px;
-}
-
-.contenedor-1-2{
-    background-color: white;
-    width: 21%;
-
-    display: flex;
-    flex-direction: column;
-    padding: 70px;
-}
-
-.contenedor-1-3{
-    background-color: #ffaecd;
-    width: 37%;
-    height: 460px;
-
-    padding: 100px;
-}
-
-
-
-/* Items dentro de los contenedores */
-
-.contenedor-1-1-title{
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: 900;
-    font-size: 55px;
-}
-
-.contenedor-1-1-body{
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: 100;
-    font-size: 15px;
-    line-height: 30px;
-}
-
-
-
-.contenedor-1-2-title{
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 30px;
-    font-weight: 100;
-    color: black;
-}
-
-.contenedor-1-2-body{
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 12px;
-    line-height: 35px;
-}
-
-
-.contenedor-1-3-title{
-    font-family: 'Times New Roman', Times, serif;
+span{
     font-size: 25px;
-}
-
-.contenedor-1-3-body{
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 15px;
-    line-height: 25px;
-}
-
-a{
-    text-decoration: none;
     color: black;
+    font-weight: 600;
+    padding-left: 10%;
+    padding-bottom: 10px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
-a:hover{
-    color: red;
-}
 
-
-/* Ahora modificaremos la barra blanca que hay al final de toda la pagina */
-
-.contenedor-principal-2{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-
-    margin-top: 30px;
-}
-
-.contenedor-2-1{
-    font-size: 30px;
-    font-weight: 700;
-}
-
-.contenedor-2-2{
-    display: flex;
-    width: 60%;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-
+.list-item{
     font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    flex-direction: row;
+    color: black;
+    width: 50%;
+    justify-content: space-between;
 }
 
-/* Medias querys */
+.integrantes{ 
+    width: 100%;
+    height: 60%;
 
-@media all and (max-width: 1670px){
-   
-    .contenedor-1-1{
-        display: flex;
-        flex-direction: column;
-        padding: 100px;
-    }
-    
-    .contenedor-1-2{
-        display: flex;
-        flex-direction: column;
-        padding: 5px;
-    }
+    display: flex;
+    flex-direction: column;
+    background-color: #8de6cd     ; 
 
-    
-    
-    .contenedor-1-3{
-        padding: 40px;
-    }
+    padding-top: 40px;
 }
 
 
+.img-github{
+    width: 20px
+}
 
-@media all and (max-width: 920px){
+.imagen-pokemon{
+    width: 150px
+}
 
-    .contenedor-principal-1{
-       flex-direction: column;
-       height: 1200px;
-    }    
+.opciones{
 
+    height: 100%;
+    display: flex;
+    flex-direction: row;
 
-    .contenedor-1-1{
-        width: 100%;
-        height: 500px;
-        padding: 100px;
-    }
-    
-    .contenedor-1-2{
-        width: 100%;
-        height: 400px;
-        padding: 50px;
+    width: 100%;
+    background-color: #055c43 ;
+    align-items: center;
+    justify-content: center;
+}
 
-        flex-direction: column;
-        
-    }
+.list-options{
+    list-style: none;
 
+    width: 30%;
 
-    .contenedor-1-2-body{
-        margin-left: 150px;
-    }
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
+.opcion-item{
+    color: white;
+}
 
-    
-    .contenedor-1-3{
-        background-color: #ffaecd;
-        width: 100%;
-        height: 200px;
-        padding: 50px;
-    }
-
-    .contenedor-principal-2{
-        flex-direction: column;
-        justify-content: space-around;
-        margin-top: 30px;
-    }
-
-    .contenedor-2-2{
+@media all and ( min-width: 1050px ){
+    .list-options{
         flex-direction: row;
-        justify-content: space-evenly;
-        flex-wrap: wrap;
-    }  
-}
-
-
-
-
-@media all and (max-width: 500px){
-
-    .contenedor-principal-1{
-       flex-direction: column;
-       height: 1200px;
-    }    
-
-
-    .contenedor-1-1{
-        width: 100%;
-        height: 800px;
-        padding: 0px;
-    }
-    
-    .contenedor-1-2{
-        width: 100%;
-        height: 400px;
-        padding: 0px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    
-    }
-
-    .contenedor-1-2-body{
-        margin: 0;
-        width: 100%;
-    }
-
-   
-
-    
-    .contenedor-1-3{
-        background-color: #ffaecd;
-        width: 100%;
-        height: 500px;
-        padding: 0px;
-    }
-
-    .contenedor-principal-2{
-        flex-direction: column;
-        justify-content: space-around;
-        margin-top: 30px;
-    }
-
-    .contenedor-2-2{
-        flex-direction: row;
-        justify-content: space-evenly;
-        flex-wrap: wrap;
-    }  
-   
-    .contenedor-1-1-title{
-        font-size: 20px;
     }
 }

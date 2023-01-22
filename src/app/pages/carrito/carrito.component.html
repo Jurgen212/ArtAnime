@@ -1,11 +1,11 @@
 
 <div class="contenedor_todo" *ngIf="sesionIniciada">
-
+  
 <button class="close" (click)="cerrarSesion()">Cerrar sesión</button>
 
 <div class="container" *ngIf="funkosEnCarrito.length != 0 && !partePagos && !parteEnvios">
     
-    <h1>Carrito de {{ nombreUsuario }}</h1>
+    <h1 style="color: white;">Carrito de {{ nombreUsuario }}</h1>
     <div class="lista_container">
         <ol>
             <li *ngFor="let item of funkosEnCarrito; let i = index">
@@ -51,8 +51,8 @@
 </div>
 
 <div class="container" *ngIf="funkosEnCarrito.length == 0 && !partePagos && !parteEnvios">
-    <h1>Por favor añada algún producto {{ nombreUsuario }} </h1>
-    <h6>Aquí podrá visualizar lo que añada al carrito</h6>
+    <h1 style="color: white;">Por favor añada algún producto {{ nombreUsuario }} </h1>
+    <h6 style="color: white;">Aquí podrá visualizar lo que añada al carrito</h6>
     <hr>
 </div>
 
@@ -184,7 +184,9 @@
 </div>
 
 <div *ngIf="!sesionIniciada" class="container">
-  <h1>Por favor inicie sesión aquí <small><a routerLink="/home/login"> iniciar sesión </a></small></h1>
+  <br>
+  <h1 style="color: white;">Por favor inicie sesión aquí <small><a routerLink="/home/login"> iniciar sesión </a></small></h1>
+  <hr>
 </div>
 
 

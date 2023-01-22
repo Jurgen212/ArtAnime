@@ -1,0 +1,5 @@
+.contenedor-principal{
+    background-image        : url(".././assets/bgprincipal.png");
+    background-size         :contain;
+    background-attachment   : fixed;
+}
