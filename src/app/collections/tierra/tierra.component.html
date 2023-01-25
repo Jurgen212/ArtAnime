@@ -1,16 +1,16 @@
 
-<div class="container">
-    <img    class="flecha" src="/assets/login-img/volver.png" 
-                    height="20" 
+<div class="container text-center">
+    <img    class="flecha" src="/assets/login-img/volver.png"
+                    height="20"
                     width="20"
                     routerLink="/home/main-collections">
 
     <br><br>
-    <img src = "/assets/tarjetas-colecciones/pngwing2.com.png" class="animal">   
-    <h1>Colección de Tierra</h1>
-    <h5>Recomendada para adultos</h5> 
-    
-    <hr> 
+    <img src = "/assets/tarjetas-colecciones/pngwing2.com.png" class="animal">
+    <h1 style="font-weight: 600;">Colección de Tierra</h1>
+    <h5>Recomendada para adultos</h5>
+
+    <hr>
 </div>
 
 
@@ -19,13 +19,13 @@
 
         <a (click) = consola(i)>
             <p class="tarjeta_name">{{ item.name }}</p>
-            <img [src]= "item.funkoImage"> 
+            <img [src]= "item.funkoImage">
 
             <p class="tarjeta_price">${{ item.nCa }}</p>
             <p class="info"> Cop/ Cu</p>
             <p class="info" *ngIf="conocerSiHayDescuento(i)">PROMOCION!!</p>
             <p class="tarjeta_stock">DISPONIBLES {{ item.stock }}</p>
         </a>
-            
+
     </div>
 </div>

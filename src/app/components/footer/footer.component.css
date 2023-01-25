@@ -1,85 +1,85 @@
-
 /* Estilos de el contenedor mas grande del footer, aqui estamos asignando una forma en columna para los 2 contenedores grandes */
-footer{
+footer {
 
-    border: 1px solid black;
-    margin-top: 50px;
-    width: 100%;
-    height: 500px;
+  margin-top: 50px;
+  width: 100%;
+  height: 500px;
 
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
 }
 
-span{
-    font-size: 25px;
-    color: black;
-    font-weight: 600;
-    padding-left: 10%;
-    padding-bottom: 10px;
-    font-family: 'Times New Roman', Times, serif;
+span {
+  font-size: 25px;
+  color: black;
+  font-weight: 600;
+  padding-bottom: 10px;
+  font-family: 'Rubik', sans-serif;
 }
 
 
-.list-item{
-    font-size: 15px;
-    font-family: 'Times New Roman', Times, serif;
-    display: flex;
+.list-item {
+  font-size: 15px;
+  font-family: 'Rubik', sans-serif;
+  display: flex;
+  flex-direction: row;
+  color: black;
+  width: 100%;
+  justify-content: space-between;
+  gap: 8rem;
+}
+
+.integrantes {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  background-color: #8de6cd;
+  align-items: center;
+  justify-content: center;
+  padding-top: 40px;
+}
+
+
+.img-github {
+  width: 20px
+}
+
+.imagen-pokemon {
+  width: 150px
+}
+
+.opciones {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: #055c43;
+  align-items: center;
+  justify-content: center;
+}
+
+.list-options {
+  list-style: none;
+
+  width: 30%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.opcion-item {
+  color: white;
+  font-weight: 600;
+  font-family: 'Rubik', sans-serif;
+}
+
+@media all and (min-width: 1050px) {
+  .list-options {
     flex-direction: row;
-    color: black;
-    width: 50%;
-    justify-content: space-between;
-}
-
-.integrantes{ 
-    width: 100%;
-    height: 60%;
-
-    display: flex;
-    flex-direction: column;
-    background-color: #8de6cd     ; 
-
-    padding-top: 40px;
-}
-
-
-.img-github{
-    width: 20px
-}
-
-.imagen-pokemon{
-    width: 150px
-}
-
-.opciones{
-
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-
-    width: 100%;
-    background-color: #055c43 ;
-    align-items: center;
-    justify-content: center;
-}
-
-.list-options{
-    list-style: none;
-
-    width: 30%;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.opcion-item{
-    color: white;
-}
-
-@media all and ( min-width: 1050px ){
-    .list-options{
-        flex-direction: row;
-    }
+  }
 }

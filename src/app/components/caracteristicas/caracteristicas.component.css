@@ -8,7 +8,6 @@
 .imagen-container{
   width: 60%;
   height: 95vh;
-  background-color: #8de6cd;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -46,7 +45,7 @@
 }
 .espacio{
   height: 40%;
-  width: 100%; 
+  width: 100%;
 }
 
 .chulo-style{
@@ -123,7 +122,7 @@ img{
 .send-calification{
   width: 35%;
   height: 40px;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Rubik', sans-serif;
   font-size: 12px;
   background-color: #8de6cd;
   border: 1px solid black;

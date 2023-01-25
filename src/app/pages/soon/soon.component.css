@@ -2,7 +2,7 @@
 
 
 .flecha:hover {
-    
+
     -webkit-transform:scale(1.3);
     transform:  scale(1.3);
     transition-duration: .1s;
@@ -27,7 +27,7 @@
 
     display: flex;
     flex-wrap: wrap;
-    
+
     gap: 20px;
 }
 
@@ -51,7 +51,7 @@ img{
 
 
 .tarjeta_name{
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Rubik', sans-serif;
     font-size: 90%;
     font-weight: 300;
     color: white;
@@ -62,20 +62,20 @@ img{
      font-size: 15px;
      color: white;
      font-weight: 300;
-     font-family: 'Times New Roman', Times, serif;
+     font-family: 'Rubik', sans-serif;
 }
 
 .tarjeta_price{
     font-size: 20px;
     margin-top: 10px;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Rubik', sans-serif;
     font-weight: 400;
     color: white;
     line-height: 20px;
 }
 
 .tarjeta_stock{
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Rubik', sans-serif;
     font-size: 10px;
     color: white;
 }

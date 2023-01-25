@@ -1,7 +1,7 @@
 
 <footer>
     <!-- Contenedor con los 3 bloques de color rojo, blanco y azul -->
-    
+
     <div class="integrantes">
 
         <span>Integrantes</span>
@@ -25,7 +25,7 @@
         <ul class="list-options">
             <li *ngFor="let item of opciones"
                 class="mb-3">
-                
+
                 <a [routerLink]="item.path"
                     class="opcion-item">{{ item.name }}</a>
             </li>

@@ -1,4 +1,6 @@
-
+.contenedor_todo {
+  margin: 2rem;
+}
 
 .lista_container{
     width: 80%;
@@ -18,10 +20,10 @@ li{
 }
 
 .contenedor_li{
- 
+
     width: 100%;
     height: 100px;
-    
+
     background-color: white;
     display: flex;
     flex-direction: row;
@@ -46,10 +48,10 @@ img{
 }
 
 
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-  margin: 0; 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 input{
@@ -78,7 +80,7 @@ input{
     padding: 0;
     background-color: white;
     border: none;
-    
+
 }
 
 .boton_input:hover{
@@ -120,7 +122,7 @@ p{
 }
 .total{
     font-weight: 600;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Rubik', sans-serif;
     font-size: 20px;
 }
 
@@ -141,8 +143,8 @@ p{
 }
 
 @media all and (min-width: 0px) and ( max-width: 1000px ) {
-   
-   
+
+
     .lista_container{
         gap: 20px;
         width: 90%;
@@ -154,31 +156,8 @@ p{
  }
 
 
-.close{
-    border-radius: 10px; 
-    margin-top: 20px;
-    margin-left: 30px;
-    color: black;
-    background: white;
-    margin-bottom: 20px;
-    border: 1px solid black;
-    width: 130px;
-    height: 40px;
-}
-
-
-.close:hover {
-    -webkit-transform:scale(1.1);
-    transform:  scale(1.1);
-    transition-duration: .5s;
-    cursor: pointer;
-    background-color: red;
-    color: white;
-}
-
-
  @media all and (min-width: 0px) and ( max-width: 790px ) {
-    
+
     .contenedor_li{
         width: 100%;
     }
@@ -190,7 +169,7 @@ p{
         flex-direction: column;
         height: 80px;
         margin-top: 100px;
-        
+
     }
 
     div{
@@ -204,7 +183,7 @@ p{
         margin-bottom: 20px;
     }
 
-    
+
  }
 
  .span_total{
@@ -213,7 +192,7 @@ p{
 
 
  @media all and (min-width: 0px) and ( max-width: 540px ) {
-    
+
     .container{
         margin: 0;
     }
@@ -225,7 +204,7 @@ p{
 
 
  @media all and (min-width: 0px) and ( max-width: 450px ) {
-    
+
     .contenedor_li{
         flex-direction: column;
         height: 300px;
@@ -263,7 +242,7 @@ p{
     background: #f8f4f4;
     padding: 30px;
     border-radius: 15px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Rubik', sans-serif;
     border: 6px solid black;
     justify-content: space-around;
     box-sizing: border-box;
@@ -274,7 +253,7 @@ p{
     margin-right: 150px;
     font-size: 18px;
     justify-content: space-around;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Rubik', sans-serif;
     color:black;
     margin-bottom: 50px;
 }
@@ -309,7 +288,7 @@ p{
 .nombre_p{
     font-size: 12px;
     margin-right: 75px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Rubik', sans-serif;
     color:black;
 }
 
@@ -317,7 +296,7 @@ p{
     width: 450px;
     height: 400px;
     padding: 15px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Rubik', sans-serif;
 }
 
 .name_p{
@@ -325,7 +304,7 @@ p{
     font-size: 18px;
     margin-right: 380px;
     justify-content: space-around;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Rubik', sans-serif;
     color:black;
 }
 
@@ -335,7 +314,7 @@ p{
     margin-right: 275px;
     width: 100%;
     justify-content: space-around;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Rubik', sans-serif;
     color:black;
 }
 
@@ -343,7 +322,7 @@ p{
     margin-right: 360px;
     font-size: 18px;
     justify-content: space-around;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Rubik', sans-serif;
     color:black;
 }
 
@@ -351,7 +330,7 @@ p{
     margin-right: 415px;
     font-size: 18px;
     justify-content: space-around;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Rubik', sans-serif;
     color:black;
 }
 
@@ -364,7 +343,7 @@ p{
     background-color: white;
     border: 1px solid black;
     color: black;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-size: 18px;
 }
 
@@ -376,7 +355,7 @@ p{
     background-color: white;
     border: 1px solid black;
     color: black;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-size: 18px;
 }
 
@@ -389,7 +368,7 @@ p{
     background-color: white;
     border: 1px solid black;
     color: black;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-size: 18px;
 }
 
@@ -401,7 +380,7 @@ p{
     background-color: white;
     border: 1px solid black;
     color: black;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-size: 18px;
 }
 
@@ -466,7 +445,7 @@ p{
 
     .Pagar_p{
         float:left;
-        width: 150px;       
+        width: 150px;
     }
 
     .cancelar_p{
@@ -489,21 +468,21 @@ p{
     margin: 50px auto;
     width: 43%;
   }
-  
+
   header {
     color: black;
     font-size: 1.7em;
     padding: 3% 0;
     border-bottom: 2px solid black;
   }
-  
+
   .area {
     color: black(255, 255, 255);
     width: 80%;
 
     margin: 40px 0;
   }
-  
+
   .label_p {
     line-height: 35px;
     display: table-header-group;
@@ -511,7 +490,7 @@ p{
     letter-spacing: 0.5px;
     transition: all 0.3s ease;
   }
-  
+
   .input_e {
     width: 100%;
     box-sizing: border-box;
@@ -524,9 +503,9 @@ p{
     transition: all 0.3s ease;
     font-size: 1.05em;
   }
-  
+
   select {
-    
+
     width: 100%;
     box-sizing: border-box;
     padding: 15px;
@@ -538,52 +517,42 @@ p{
     transition: all 0.3s ease;
     font-size: 1.05em;
   }
-  
+
   option{
     color: black;
   }
-  
+
   .input_e:focus {
     outline: none !important;
     border-color: #69B692;
   }
-  
+
   .input_e:focus + label {
     color: #69b692;
   }
-  
+
   .row {
     margin: 20px 0;
     width: 100%;
     padding: 0;
     display: table;
   }
-  
+
   .col2 {
     display: table;
     width: 47%;
     float: left;
   }
-  
+
   .col2:nth-child(2) {
     float: right;
     display: table;
   }
-  
+
   .btn {
-    width: 35%;
-    margin-right: 3%;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 0.9em;
-    transition: all 0.3s ease;
+    font-family: 'Rubik', sans-serif;
   }
-  
-  .btn:hover {
-    background: #69B692;
-    border-color: #69B692;
-    cursor: pointer;
-  }
-  
+
   @media screen and (max-width: 800px) {
     #myform {
     margin: 50px auto;
@@ -594,18 +563,18 @@ p{
     width: 100%;
     float: left;
   }
-    
+
     .ckeckarea label {
     line-height:20px;
   }
   }
-  
+
   @media screen and (max-width: 600px) {
     #myform {
     margin: 50px auto;
     width: 100%;
   }
-   
+
   }
 
 
