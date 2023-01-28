@@ -19,15 +19,15 @@
     </div>
 
     <div class="opciones">
-
         <img    src="../../../assets/agua-pok.png"
                 class="imagen-pokemon">
-        <ul class="list-options">
+        <ul class="list-options navbar-nav mb-2 mb-lg-0">
             <li *ngFor="let item of opciones"
-                class="mb-3">
+                class="nav-item">
 
                 <a [routerLink]="item.path"
-                    class="opcion-item">{{ item.name }}</a>
+                  class="nav-link active"
+                  aria-current="page">{{ item.name }}</a>
             </li>
         </ul>
     </div>

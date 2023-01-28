@@ -1,101 +1,81 @@
 .container{
     width: 100%;
-    height: 100%;
+    height: 800px;
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-around;
     align-items: center;
-    margin-top: 50px;
+    gap: 3rem;
+}
+
+input {
+    color:rgb(109, 109, 109);
+    width: 20vw;
+    height: 40px;
+    border: 1px solid black;
+    padding: 6px 20px;
 }
 
 .tarjeta{
-    max-width:  1200px;
-    min-width: 100px;
-    height: 80%;
-    background: #8DE6CD;
-    padding: 30px;
-    border-radius: 15px;
-    font-family: 'Times New Roman', Times, serif;
-    border: 6px solid black;
-    justify-content: space-around;
-    box-sizing: border-box;
-    box-shadow: 7px 13px 37px #000;
+    width: 100%;
 }
 
-.tarjeta h1{
-    color: black;
-    font-size: 30px;
-    margin-bottom: 20px;
-    font-family: 'Times New Roman', Times, serif;
+table{
+  width: 30vw;
+  height: 60vh;
+  font-family: 'Rubik', sans-serif;
+  background-color: #ffffff;
+  box-shadow: 30px 30px 15px -3px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
 }
 
-.tarjeta h2{
-    margin-right: 755px;
-    font-size: 26px;
-    font-family: 'Times New Roman', Times, serif;
-    color:black;
+
+th{
+  font-family: 'Rubik', sans-serif;
+  text-align:justify;
+  padding: 8px;
 }
 
-.tarjeta h3{
-    margin-right: 620px;
-    font-size: 26px;
-    font-family: 'Times New Roman', Times, serif;
-    color:black;
+td{
+  width: 100%;
+  font-family: 'Rubik', sans-serif;
+  text-align: center;
+  align-items: center;
+  padding: 8px;
 }
 
-.tarjeta h4{
-    margin-right: 710px;
-    font-size: 26px;
-    font-family: 'Times New Roman', Times, serif;
-    color:black;
+tr{
+  width: 80%;
 }
 
 .controls{
-    margin-right: 60px;
-    width: 100%;
-    height: 44px;
-    border-radius: 6px;
-    margin-bottom: 10px;
-    background-color: white;
-    border: 2px solid rgb(255, 255, 255);
+    border: 1px solid black;
+    padding: 6px 20px;
+    width: 20vw;
+    height: 40px;
+    border-radius: 8px;
     color: black;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 18px;
+    font-family: 'Rubik', sans-serif;
 }
 
 .controls2{
-    margin-right: 60px;
-    width: 100%;
-    height: 200px;
-    border-radius: 6px;
-    margin-bottom: 10px;
-    background-color: white;
-    border: 2px solid rgb(255, 255, 255);
+    border: 1px solid black;
+    padding: 6px 20px;
+    width: 20vw;
+    height: 80px;
+    border-radius: 8px;
     color: black;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 18px;
+    font-family: 'Rubik', sans-serif;
 }
 
 .Enviar{
-    width: 20%;
-    height: 50px;
-    margin-top: 35px;
-    font-weight: 600;
-    font-size: 20px;
-    border-radius: 6px;
-    border: 1px solid black;
-    background-color: rgb(255, 255, 255);
-    color: black;
-    cursor: pointer;
-    text-align: center;
+    width: 60%;
 }
 
-h1, h2, h3, h4{
-    width: 100%;
-}
-
-.Enviar:hover{
-    background-color: whitesmoke;
+h2 {
+  width: 100%;
+  font-size: 30px;
+  float: left;
 }
 
 span{
@@ -108,4 +88,72 @@ span{
     position: absolute;
     left: 40%;
     top: 50%;
+}
+
+img:hover {
+  -webkit-transform:scale(1.05);
+  transform:  scale(1.05);
+  transition-duration: .5s;
+}
+
+@media all and (min-width: 0px) and ( max-width: 1200px ) {
+
+  .contenedor{
+      height: 500px;
+  }
+  .img-decoracion-1{
+      display: none;
+  }
+
+  table{
+      width: 40vw;
+  }
+
+
+  tr{
+      width: 100vw;
+  }
+
+  input{
+      width: 100%;
+  }
+
+
+}
+
+
+@media all and (min-width: 0px) and ( max-width: 780px ) {
+
+  .contenedor{
+      height: 500px ;
+  }
+
+  .img-decoracion-2{
+      display: none;
+  }
+
+  table{
+      width: 60vw;
+  }
+
+
+}
+
+
+
+@media all and (min-width: 0px) and ( max-width: 450px ) {
+
+  .contenedor{
+      height: 500px ;
+
+  }
+
+  .img-decoracion-2{
+      display: none;
+  }
+
+  table{
+      width: 90vw;
+  }
+
 }

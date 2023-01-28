@@ -2,11 +2,14 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
     margin-top: 50px;
 }
 
 .naruto-img{
-    width: 50%;
+  float:left; 
+  width:450px; 
+  height:550px;
 }
 
 
@@ -21,12 +24,14 @@
     width: 45%;
     background-color: #8DE6CD;
     gap: 10px;
+    box-shadow: 30px 30px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
 button{
     width: 200px;
     height: 60px;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Rubik', sans-serif;
+    font-size: 15px;
 }
 
 

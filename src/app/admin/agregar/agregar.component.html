@@ -1,117 +1,115 @@
-<img    *ngIf="mostrar_chulo"
-        class="chulo-style"
-        src="assets/verificaciones/chulo.png">
+<img
+  *ngIf="mostrar_chulo"
+  class="chulo-style"
+  src="assets/verificaciones/chulo.png"
+/>
 
-    <div class = "contenedor">  
+<div class="contenedor">
+  <div id="Imagenes">
+    <img
+      src="/assets/login-img/naruto-header.png"
+      alt="NarutoHeather"
+      style="float: left; width: 450px; height: 550px"
+      class="naruto-img"
+    />
+  </div>
 
-        <div id ="Imagenes">
+  <form [formGroup]="miFormulario" (ngSubmit)="guardar()">
+    <div class="form-registro">
+      <img
+        src="/assets/login-img/volver.png"
+        height="20"
+        width="20"
+        routerLink="/admin/principal"
+      />
 
-            <img    src="/assets/login-img/naruto-header.png" 
-                    alt="NarutoHeather" 
-                    style= "float:left; width:490px; height:600px;"
-                    class="naruto-img">
-            
-        </div>
+      <h2 style="font-weight: 600">Insertar Producto</h2>
+      <span *ngIf="datosIncorrectos">Ingrese bien los datos</span>
 
-        <form [formGroup]="miFormulario" (ngSubmit)="guardar()">
-        <div class = "form-registro"> 
-            
-            <img    src="/assets/login-img/volver.png" 
-                    height="20" 
-                    width="20"
-                    routerLink="/admin/principal">
+      <input
+        autocomplete="off"
+        type="text"
+        class="controls"
+        id="nombre"
+        placeholder="Nombre del Producto"
+        formControlName="name"
+      />
+      <span *ngIf="nombre_largo"> El máximo del nombre son 25 caracteres </span>
 
-            <h2>Insertar Producto</h2>
-            <span *ngIf="datosIncorrectos">Ingrese bien los datos</span>
+      <input
+        autocomplete="off"
+        type="number"
+        class="controls"
+        id="precio"
+        placeholder="Precio del Producto"
+        formControlName="price"
+      />
 
-            <input  autocomplete="off" 
-                    type = "text" 
-                    class = "controls" 
-                    id = "nombre" 
-                    placeholder = "Nombre del Producto"
-                    formControlName="name">
-                    <span *ngIf="nombre_largo"> El máximo del nombre son 25 caracteres </span>
+      <input
+        autocomplete="off"
+        type="number"
+        class="controls"
+        id="stock"
+        placeholder="Cantidad del Producto"
+        formControlName="stock"
+      />
 
+      <input
+        autocomplete="off"
+        type="text"
+        class="controls"
+        list="categoria"
+        placeholder="Categoría del Producto"
+        formControlName="coleccion"
+      />
 
-            <input  autocomplete="off" 
-                    type = "number" 
-                    class = "controls" 
-                    id = "precio" 
-                    placeholder = "Precio del Producto"
-                    formControlName="price">
+      <datalist id="categoria">
+        <option>Agua</option>
+        <option>Tierra</option>
+        <option>Aire</option>
+        <option>Cooming soon</option>
+      </datalist>
 
+      <input
+        autocomplete="off"
+        type="text"
+        class="controls"
+        list="materiales"
+        placeholder="Material del Producto"
+        formControlName="material"
+      />
 
-            <input  autocomplete="off" 
-                    type = "number" 
-                    class = "controls" 
-                    id = "stock" 
-                    placeholder = "Cantidad del Producto"
-                    formControlName="stock">
+      <datalist id="materiales">
+        <option>Plástico</option>
+        <option>Resina</option>
+      </datalist>
 
+      <input
+        type="text"
+        class="controls"
+        id="imagen"
+        placeholder="Imagen del Producto"
+        formControlName="funkoImage"
+      />
 
-            <input  autocomplete="off" 
-                    type = "text" 
-                    class = "controls" 
-                    list="categoria" 
-                    placeholder = "Categoría del Producto"
-                    formControlName="coleccion">
+      <input
+        type="text"
+        class="controls"
+        id="des"
+        placeholder="Descripción del producto"
+        formControlName="des"
+      />
 
-
-            <datalist id = "categoria">
-                <option>Agua</option>
-                <option>Tierra</option>
-                <option>Aire</option>
-                <option>Cooming soon</option>
-            </datalist>
-
-            <input  autocomplete="off" 
-                    type = "text" 
-                    class = "controls" 
-                    list="materiales" 
-                    placeholder = "Material del Producto"
-                    formControlName="material">
-
-            <datalist   id = "materiales">
-                <option>Plástico</option>
-                <option>Resina</option>
-            </datalist>
-
-            <input  type = "text" 
-                    class = "controls" 
-                    id = "imagen" 
-                    placeholder = "Imagen del Producto"
-                    formControlName ="funkoImage">
-
-            <input  type = "text" 
-                    class = "controls" 
-                    id = "des" 
-                    placeholder = "Descripción del producto"
-                    formControlName ="des">
-
-        
-
-                <button type = "submit" 
-                        class = "insertar">Insertar
-                </button>
-
-                <button class="boton-2"
-                        type="submit">
-                        Insertar
-                </button>
-            
-            
-
-        </div>
-        </form>
-
-        <div id ="Imagenes">
-
-            <img src="/assets/login-img/pokemon-header.png" 
-                 alt="pokemon" 
-                 style= "float:left; width:330px; height:300px;"
-                 class="pokemon-img">
-            
-        </div>
-
+      <button type="submit" class="insertar btn btn-dark btn-lg">Insertar</button>
     </div>
-    
+  </form>
+
+  <div id="Imagenes">
+    <img
+      src="/assets/login-img/pokemon-header.png"
+      alt="pokemon"
+      style="float: left; width: 450px; height: 350px"
+      class="pokemon-img"
+    />
+  </div>
+</div>

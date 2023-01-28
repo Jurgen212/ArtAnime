@@ -42,6 +42,8 @@
 .info-container{
   width: 40%;
   height: 80vh;
+  align-items: center;
+  justify-content: center;
 }
 .espacio{
   height: 40%;

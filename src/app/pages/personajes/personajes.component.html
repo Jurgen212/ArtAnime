@@ -12,13 +12,15 @@
 
 </div>
 
+<div *ngIf="advertencia text-center">
+    <h1 class="advertencia" style="color: white; font-family: 'Rubik', sans-serif; font-weight: 600;">No se encontraron resultados</h1>
+</div>
+
 <hr>
+
 <div *ngIf="personajes.length != 0">
     <app-tarjetas [personajes]="personajes"></app-tarjetas>
 </div>
 
-<div *ngIf="advertencia text-center">
-    <p class="advertencia">No se encontraron resultados</p>
-</div>
 
 

@@ -1,4 +1,9 @@
 
+.cabecera {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 img:hover {
     -webkit-transform:scale(1.5);
     transform:  scale(1.5);
@@ -10,11 +15,14 @@ img{
 }
 
 
+.tittle {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 600;
+  color: white;
+  text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+}
 
 
-
-
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -31,11 +39,12 @@ body, html {
   padding: 0;
   height: 100%;
   width: 100%;
+  font-family: 'Rubik', sans-serif;
 }
 
 body {
   overflow: hidden;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Rubik', sans-serif;
   background-color: var(--app-bg);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -190,6 +199,7 @@ body {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
+  font-family: 'Rubik', sans-serif;
 }
 
 .tableView .products-row {
@@ -200,6 +210,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   border-radius: 4px;
+  font-family: 'Rubik', sans-serif;
 }
 
 .tableView .products-row:hover {
@@ -345,99 +356,9 @@ body {
   background-color: #f00;   
 }
 
-
 button {
-  background: none;
-  border: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin: 0.1em;
-  padding: 0.5em 0.5em;
-  -webkit-box-shadow: inset 0 0 0 2px green;
-          box-shadow: inset 0 0 0 2px green;
-  color: #000;
   font-size: inherit;
-  font-weight: 700;
-  position: relative;
-  vertical-align: middle;
 }
-
-button::before, button::after {
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-
-.draw {
-  -webkit-transition: color 0.25s;
-  transition: color 0.25s;
-}
-
-.draw::before, .draw::after {
-  border: 2px solid transparent;
-  width: 0;
-  height: 0;
-}
-
-.draw::before {
-  top: 0;
-  left: 0;
-}
-
-.draw::after {
-  bottom: 0;
-  right: 0;
-}
-
-.draw:hover {
-  color: #60daaa;
-}
-
-.draw:hover::before, .draw:hover::after {
-  width: 100%;
-  height: 100%;
-}
-
-.draw:hover::before {
-  border-top-color: #60daaa;
-  border-right-color: #60daaa;
-  -webkit-transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
-  transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
-}
-
-.draw:hover::after {
-  border-bottom-color: #60daaa;
-  border-left-color: #60daaa;
-  -webkit-transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
-  transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
-}
-
-.meet:hover {
-  color: #282aab;
-}
-
-.meet::after {
-  top: 0;
-  left: 0;
-}
-
-.meet:hover::before {
-  border-top-color: #282aab;
-  border-right-color: #282aab;
-}
-
-.meet:hover::after {
-  border-bottom-color: #282aab;
-  border-left-color: #282aab;
-  -webkit-transition: height 0.25s ease-out,
- width 0.25s ease-out 0.25s;
-  transition: height 0.25s ease-out,
- width 0.25s ease-out 0.25s;
-}
-
 
 .contenedor-imagen{
   max-height: 150px;

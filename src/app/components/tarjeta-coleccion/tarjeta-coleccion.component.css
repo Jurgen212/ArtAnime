@@ -1,3 +1,8 @@
+.tittle {
+  color: #fff;
+  text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+}
+
 
 .contenedor{
   margin-top: 0;
@@ -18,7 +23,6 @@
     font-family: 'Rubik', sans-serif;
     background-image: url('/assets/tarjetas-colecciones/tierra.png');
     box-shadow: 30px 30px 15px -3px rgba(0, 0, 0, 0.1);
-    border-style: double;
     border-radius: 30px;
     cursor: pointer;
 }
@@ -57,7 +61,6 @@
     font-family: 'Rubik', sans-serif;
     background-image: url('/assets/tarjetas-colecciones/agua.png');
     box-shadow: 30px 30px 15px -3px rgba(0, 0, 0, 0.1);
-    border-style: double;
     border-radius: 30px;
     cursor: pointer;
 }
@@ -70,7 +73,6 @@
     background-image: url('/assets/tarjetas-colecciones/aire2.png');
     background-size: cover;
     box-shadow: 30px 30px 15px -3px rgba(0, 0, 0, 0.1);
-    border-style: double;
     border-radius: 30px;
     cursor: pointer;
 }

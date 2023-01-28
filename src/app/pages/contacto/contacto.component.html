@@ -3,21 +3,48 @@
         class="chulo-style"
         src="assets/verificaciones/chulo.png">
 
-<div class = "container">
-    <div class ="tarjeta">
-        <form [formGroup]="miFormulario">
-            <h1>Ponte en Contacto con Nosotros</h1>
-
-            <span *ngIf="dataIncorrecta">Por favor llene todos los campos ---------</span><br>
-            <h2>Ingresa tu nombre:</h2>
-            <input type = "text" class = "controls" formControlName="name">
-            <h3>Ingresa tu correo electronico:</h3>
-            <input type = "email" class = "controls" formControlName="mail">
-            <h4>Ingresa tu comentario:</h4>
-            <input type = "text" class = "controls2" formControlName="comment">
-            <button type = "submit" class = "Enviar" (click)="guardar()" >Enviar</button>
-        </form>
+<div class = "container text-center">
+    <div id="Imagenes">
+      <img src="assets/login-img/naruto-header.png" alt="NarutoHeather" class="img-decoracion-1" style="float:left; width:450px; height:550px;">
     </div>
+
+    <form [formGroup]="miFormulario">
+      <div class ="tarjeta">
+        <table>
+          <tbody>
+            <tr>
+              <td><h2 style="font-weight: 600;">Contáctanos</h2></td>
+            </tr>
+            
+            <span *ngIf="dataIncorrecta" style="color: black;">Por favor ingrese todos los campos</span>
+            
+            <tr>
+              <td><input type = "text" class = "controls" formControlName="name" placeholder="Nombre"></td>
+            </tr>
+  
+            <tr>
+              <td><input type = "email" class = "controls" formControlName="mail" placeholder="Email"></td>
+            </tr>
+            
+            <tr>
+              <td><input type = "text" class = "controls2" formControlName="comment" placeholder="Comentario"></td>
+            </tr>
+  
+            <tr>
+              <td><button type = "submit" class = "Enviar btn btn-dark btn-lg" (click)="guardar()" >Enviar</button></td>
+            </tr>
+
+            <tr>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </form>
+
+    <div id="Imagenes">
+      <img src="assets/login-img/pokemon-header.png" alt="pokemon-header" class="img-decoracion-2" style="float:left; width:450px; height:350px;">
+  </div>
 </div>
 
 

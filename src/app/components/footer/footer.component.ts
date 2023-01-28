@@ -19,10 +19,10 @@ export class FooterComponent implements OnInit {
 
   integrantes = [
     { nombre: 'Jurgen Sanclemente', url: 'https://github.com/Jurgen212'     },
-    { nombre: 'Sebastian Dosman'  , url: 'https://github.com/SebasDosman'   },
-    { nombre: 'Nicolas Ramirez'   , url: 'https://github.com/Trompitas'     },
-    { nombre: 'Juan Pablo Tascon' , url: 'https://github.com/juanpablotr14' },
-    { nombre: 'Nicolas Gonazales' , url: ''  }
+    { nombre: 'Sebastián Dosman'  , url: 'https://github.com/SebasDosman'   },
+    { nombre: 'Nicolás Ramírez'   , url: 'https://github.com/Trompitas'     },
+    { nombre: 'Juan Pablo Tascón' , url: 'https://github.com/juanpablotr14' },
+    { nombre: 'Nicolás Gonzales' , url: ''  }
   ]
 
   opciones: opcion[] = [

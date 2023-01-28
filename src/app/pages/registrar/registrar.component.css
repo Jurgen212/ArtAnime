@@ -23,7 +23,6 @@ span{
 
 input{
     color:rgb(109, 109, 109);
-
     width: 20vw;
     height: 40px;
     border: 1px solid black;
@@ -34,7 +33,7 @@ input{
 }
 
 .singup{
-    width: 80%;
+    width: 60%;
 }
 
 h2{
