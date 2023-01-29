@@ -4,7 +4,7 @@
   src="assets/verificaciones/chulo.png"
 />
 
-<div class="container" *ngIf="hay_data">
+<div class="container text-center" *ngIf="hay_data">
   <div class="imagen-container">
     <img
       src="/assets/login-img/volver.png"
@@ -14,10 +14,13 @@
 
     <p class="nombre">{{ funko_mostrar.name }}</p>
     <img [src]="funko_mostrar.funkoImage" />
-    <div class="nombre-container">
-      <div class="contenedor-nombre-boton">
+    <div class="nombre-container text-center">
+      <div class="contenedor-nombre-boton text-center">
         <span *ngIf="yaExisteEnLocal">Este elemento ya está en el carrito</span>
-        <button (click)="anadirAlCarrito(funko_mostrar)">
+        <button
+          class="btn btn-dark btn-lg"
+          (click)="anadirAlCarrito(funko_mostrar)"
+        >
           Añadir al carrito
         </button>
       </div>
@@ -26,61 +29,117 @@
         Precio ${{ funko_mostrar.nCa }}
       </p>
       <p class="precio" *ngIf="conocerPromocion()">
-        Antes ${{ funko_mostrar.price }} ahora ${{ funko_mostrar.nCa }}
+        Antes ${{ funko_mostrar.price }} Ahora ${{ funko_mostrar.nCa }}
       </p>
     </div>
   </div>
 
-  <div class="info-container">
+  <div class="info-container text-center">
     <div class="espacio"></div>
 
-    <div class="informacion">
-      <div class="informacion-info">Información</div>
-      <div class="informacion-cell">Material: {{ funko_mostrar.material }}</div>
-      <div class="informacion-cell">Disponibles: {{ funko_mostrar.stock }}</div>
-      <div class="informacion-cell">
-        Colección: {{ funko_mostrar.coleccion }}
-      </div>
-      <div class="informacion-cell">Descripción: {{ funko_mostrar.des }}</div>
-      <diV class="informacion-cell" *ngIf="conocerPromocion()"
-        >Este producto cuenta con un descuento del
-        {{ porcentajeDescuento }}%</diV
-      >
-      <div class="informacion-cell" *ngIf="calificacion == 0">
-        Este producto aún no ha sido calificado
-      </div>
-      <div class="informacion-cell" *ngIf="calificacion != 0">
-        Calificacion: {{ calificacion }}/5
-      </div>
+    <form [formGroup]="miFormulario">
+      <div class="registro">
+        <table>
 
-      <div class="informacion-cell contenedor-calificacion">
-        <p>Añadir calificacion:</p>
+          <tbody>
+            <tr>
+              <td><h2 style="font-weight: 600; font-family: 'Rubik', sans-serif;">Información</h2></td>
+            </tr>
 
-        <form [formGroup]="miFormulario">
-          <select
-            name="calification"
-            id="calification-box"
-            formControlName="opcionSeleccionada"
-          >
-            <option value="1" class="option" [ngValue]="1">1/5</option>
-            <option value="2" class="option" [ngValue]="2">2/5</option>
-            <option value="3" class="option" [ngValue]="3">3/5</option>
-            <option value="4" class="option" [ngValue]="4">4/5</option>
-            <option value="5" class="option" [ngValue]="5">5/5</option>
-          </select>
-          <p *ngIf="isNullCalificacion">
-            Por favor seleccione una calificacion antes de enviar
-          </p>
-        </form>
+            <tr>
+              <td>
+                <div class="preinformacion">
+                  <div class="informacion-cell">
+                    Material: {{ funko_mostrar.material }}
+                  </div>
+                </div>
+              </td>
+            </tr>
 
-        <button class="send-calification" (click)="enviarCalificacion()">
-          Enviar calificacion
-        </button>
+            <tr>
+              <td>
+                <div class="preinformacion">
+                  <div class="informacion-cell">
+                    Disponibles: {{ funko_mostrar.stock }}
+                  </div>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="preinformacion">
+                  <div class="informacion-cell">
+                    Colección: {{ funko_mostrar.coleccion }}
+                  </div>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="preinformacion">
+                  <div class="informacion-cell">
+                    Descripción: {{ funko_mostrar.des }}
+                    Este producto cuenta con un descuento del {{ porcentajeDescuento }}%
+                  </div>
+                </div>
+              </td>
+            </tr>
+
+            <div class="preinformacion">
+              <div class="informacion-cell" *ngIf="calificacion == 0">
+                Este producto aún no ha sido calificado
+              </div>
+            </div>
+
+            <div class="preinformacion">
+              <div class="informacion-cell" *ngIf="calificacion != 0">
+                Calificación: {{ calificacion }}
+              </div>
+            </div>
+
+            <tr>
+              <td>
+                <p>Añadir calificacion:</p>
+
+                <select
+                  name="calification"
+                  id="calification-box"
+                  formControlName="opcionSeleccionada"
+                >
+                  <option value="1" class="option" [ngValue]="1">⭐</option>
+                  <option value="2" class="option" [ngValue]="2">⭐⭐</option>
+                  <option value="3" class="option" [ngValue]="3">⭐⭐⭐</option>
+                  <option value="4" class="option" [ngValue]="4">⭐⭐⭐⭐</option>
+                  <option value="5" class="option" [ngValue]="5">
+                    ⭐⭐⭐⭐⭐
+                  </option>
+                </select>
+
+                <p *ngIf="isNullCalificacion">
+                  Por favor seleccione una calificación antes de enviar
+                </p>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <button
+                  class="btn btn-dark btn-lg"
+                  (click)="enviarCalificacion()"
+                >
+                  Enviar calificación
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-    </div>
+    </form>
   </div>
 </div>
 
-<div class="container" *ngIf="!hay_data">
-  <span>Por favor seleccione un funko <a routerLink="/home/">Volver</a></span>
+<div class="text-center" *ngIf="!hay_data">
+  <h2 class="tittle">Por favor seleccione un producto</h2>
 </div>
