@@ -1,3 +1,8 @@
+.tittle {
+  color: #fff;
+  text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+}
+
 
 .container{
     margin-top: 100px;
@@ -15,7 +20,7 @@ div{
     max-width: 1000px;
 }
 img{
-    border: 2px solid black;
+    box-shadow: 30px 30px 15px -3px rgba(0, 0, 0, 0.1);
     margin-top: 40px;
     max-width: 80%;
     cursor: pointer;
@@ -29,10 +34,17 @@ img:hover {
     transition-duration: .2s;
 }
 
+.linea_final{
+  width: 70%;
+  margin-top: 5%;
+}
 
+.linea_inicial{
+  width: 70%;
+}
 
 @media all and (min-width: 0px) and ( max-width: 1000px ) {
-    
+
     h4{
         font-size: 20px;
     }

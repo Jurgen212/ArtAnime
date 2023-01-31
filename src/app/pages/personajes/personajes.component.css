@@ -3,11 +3,13 @@
     width: 100%;
     display: flex;
     flex-direction: row;
+    justify-content: center;
     align-items: center;
     height: 100px;
 }
 
 .buscar_input{
+    font-family: 'Rubik', sans-serif;
     margin-left: 100px;
     margin-right: 20px;
     width: 40%;
@@ -15,7 +17,7 @@
     border: 1px solid slateblue;
     border-radius: 10px;
     padding: 10px;
-}   
+}
 
 
 .buscar_input:hover{
@@ -23,7 +25,13 @@
 }
 
 .advertencia{
-    margin-left: 10%;
+    text-align: center;
     font-size: 30px;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Rubik', sans-serif;
+    color: #fff;
+    text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+}
+
+.btn {
+  font-family: 'Rubik', sans-serif;
 }

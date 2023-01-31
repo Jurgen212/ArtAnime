@@ -1,7 +1,16 @@
 
+.cabecera {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 table, th, td {
     border: 1px white;
     text-align: center;
+}
+
+th, td {
+  font-family: 'Rubik', sans-serif;
 }
 
 td{
@@ -60,4 +69,8 @@ img{
 
 .tabla_principal{
     font-size: 15px;
+}
+
+p {
+  font-family: 'Rubik', sans-serif;
 }

@@ -1,150 +1,149 @@
+<img
+  src="/assets/login-img/volver.png"
+  class="flecha_volver"
+  height="20"
+  width="20"
+  routerLink="/admin/principal"
+/>
 
-<img    src="/assets/login-img/volver.png" 
-        class="flecha_volver"
-                    height="20" 
-                    width="20"
-                    routerLink="/admin/principal">
+<img
+  *ngIf="mostrar_chulo"
+  class="chulo-style"
+  src="assets/verificaciones/chulo.png"
+/>
 
-            <img    *ngIf="mostrar_chulo"
-                    class="chulo-style"
-                    src="assets/verificaciones/chulo.png">
-
-  <div    *ngIf="buscando"
-          class="container">
-      <app-buscador (id_enviar)="recibiendo_id( $event )"></app-buscador>
-  </div>
+<div *ngIf="buscando" class="container">
+  <app-buscador (id_enviar)="recibiendo_id($event)"></app-buscador>
+</div>
 
 <div class="color-container">
+  <div class="container" *ngIf="!buscando">
+    <div class="contenedor">
+      <div id="Imagenes">
+        <img
+          class="naruto-img"
+          src="/assets/login-img/naruto-header.png"
+          alt="NarutoHeather"
+          style="float: left; width: 450px; height: 550px"
+        />
+      </div>
 
-  <div    class="container"
-          *ngIf="!buscando">
+      <form
+        autocomplete="off"
+        [formGroup]="miFormulario"
+        class="text-center form-registro"
+      >
+        <h2 style="font-weight: 600">Editar Producto</h2>
+        <span *ngIf="datosIncorrectos">Por favor ingrese bien los datos</span>
+        <input
+          type="text"
+          class="controls"
+          id="nombre"
+          placeholder="Nombre del Producto"
+          formControlName="name"
+        />
+        <span *ngIf="nombre_largo"
+          >El nombre debe tener menos de 25 caracteres</span
+        >
 
+        <input
+          type="number"
+          class="controls"
+          id="precio"
+          placeholder="Precio del Producto"
+          formControlName="price"
+        />
+        <input
+          type="number"
+          class="controls"
+          id="stock"
+          placeholder="Cantidad del Producto"
+          formControlName="stock"
+        />
 
-    <form autocomplete="off" [formGroup]="miFormulario">
+        <input
+          type="text"
+          class="controls"
+          list="categoria"
+          placeholder="Categoría del Producto"
+          formControlName="coleccion"
+        />
 
-          <div class="contenedor">
-              <div id="Imagenes">
-                <img
-                  class="naruto-img"
-                  src="/assets/login-img/naruto-header.png"
-                  alt="NarutoHeather"
-                  style="float: left; width: 490px; height: 600px"
-                />
-              </div>
-        
-              <div class="form-registro">
+        <datalist id="categoria">
+          <option>Agua</option>
+          <option>Tierra</option>
+          <option>Aire</option>
+          <option>Cooming soon</option>
+        </datalist>
 
-                <h2>Editar Producto</h2>
-                <span *ngIf="datosIncorrectos">Por favor ingrese bien los datos</span>
-                <input
-                  type="text"
-                  class="controls"
-                  id="nombre"
-                  placeholder="Nombre del Producto"
-                  formControlName="name"
-                />
-                <span *ngIf="nombre_largo">El nombre debe tener menos de 25 caracteres</span>
+        <input
+          type="text"
+          class="controls"
+          list="materiales"
+          placeholder="Material del Producto"
+          formControlName="material"
+        />
 
+        <datalist id="materiales">
+          <option>Plástico</option>
+          <option>Resina</option>
+        </datalist>
+        <input
+          type="text"
+          class="controls"
+          id="imagen"
+          placeholder="Imagen del Producto"
+          formControlName="funkoImage"
+        />
 
-                <input
-                  type="number"
-                  class="controls"
-                  id="precio"
-                  placeholder="Precio del Producto"
-                  formControlName="price"
-                />
-                <input
-                  type="number"
-                  class="controls"
-                  id="stock"
-                  placeholder="Cantidad del Producto"
-                  formControlName="stock"
-                />
+        <input
+          type="text"
+          class="controls"
+          id="des"
+          placeholder="Descripción del producto"
+          formControlName="des"
+        />
 
-                <input
-                  type="text"
-                  class="controls"
-                  list="categoria"
-                  placeholder="Categoría del Producto"
-                  formControlName="coleccion"
-                />
+        <p>Añadir un porcentaje de descuento</p>
+        <select class="select-contain" formControlName="prom">
+          <option selected value="0">0%</option>
+          <option value="0.05">5%</option>
+          <option value="0.1">10%</option>
+          <option value="0.2">20%</option>
+          <option value="0.25">25%</option>
+          <option value="0.3">30%</option>
+          <option value="0.35">35%</option>
+          <option value="0.4">40%</option>
+          <option value="0.45">45%</option>
+          <option value="0.5">50%</option>
+          <option value="0.55">55%</option>
+          <option value="0.6">60%</option>
+          <option value="0.65">65%</option>
+          <option value="0.7">70%</option>
+          <option value="0.75">75%</option>
+          <option value="0.8">80%</option>
+          <option value="0.85">85%</option>
+          <option value="0.9">90%</option>
+          <option value="0.95">95%</option>
+        </select>
 
-                <datalist id="categoria">
-                  <option>Agua</option>
-                  <option>Tierra</option>
-                  <option>Aire</option>
-                  <option>Cooming soon</option>
-                </datalist>
-                
-                <input
-                  type="text"
-                  class="controls"
-                  list="materiales"
-                  placeholder="Material del Producto"
-                  formControlName="material"
-                />
-                
-                <datalist id="materiales">
-                  <option>Plástico</option>
-                  <option>Resina</option>
-                </datalist>
-                <input
-                  type="text"
-                  class="controls"
-                  id="imagen"
-                  placeholder="Imagen del Producto"
-                  formControlName="funkoImage"
-                />
-
-
-                <input
-                  type="text"
-                  class="controls"
-                  id="des"
-                  placeholder="Descripción del producto"
-                  formControlName="des"
-                />
-
-                <p>Añadir un porcentaje de descuento</p>
-                <select class="select-contain" formControlName="prom">
-                  <option selected value="0">0%</option>
-                  <option value="0.05">5%</option>
-                  <option value="0.1">10%</option>
-                  <option value="0.2">20%</option>
-                  <option value="0.25">25%</option>
-                  <option value="0.3">30%</option>
-                  <option value="0.35">35%</option>
-                  <option value="0.4">40%</option>
-                  <option value="0.45">45%</option>
-                  <option value="0.5">50%</option>
-                  <option value="0.55">55%</option>
-                  <option value="0.6">60%</option>
-                  <option value="0.65">65%</option>
-                  <option value="0.7">70%</option>
-                  <option value="0.75">75%</option>
-                  <option value="0.8">80%</option>
-                  <option value="0.85">85%</option>
-                  <option value="0.9">90%</option>
-                  <option value="0.95">95%</option>
-
-                </select>
-
-
-                <button type="submit" 
-                        class="insertar"
-                        (click)="guardar()">Guardar cambios</button>
-              </div>
-        
-              <div id="Imagenes">
-                <img
-                class="pokemon-img"
-                  src="/assets/login-img/pokemon-header.png"
-                  alt="NarutoHeather"
-                  style="float: left; width: 330px; height: 300px"
-                />
-              </div>
-            </div>
+        <button
+          type="submit"
+          class="insertar btn btn-dark btn-lg"
+          (click)="guardar()"
+        >
+          Guardar
+        </button>
       </form>
-  </div>
-</div>      
 
+      <div id="Imagenes">
+        <img
+          class="pokemon-img"
+          src="/assets/login-img/pokemon-header.png"
+          alt="NarutoHeather"
+          style="float: left; width: 450px; height: 350px"
+        />
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,24 +1,24 @@
-<div class="container">
+<div class="container text-center">
     <br><br>
-    <h1>Próximamente</h1> 
+    <h1 style="color: white; font-family: 'Rubik', sans-serif; font-weight: 600;" class="tittle">Próximamente</h1>
     <hr>
 </div>
 
 
 
 <div class="contenedor">
-    
-    
+
+
     <div    class="tarjeta" *ngFor="let item of funkos_proximos, let i = index" style="background-image: url('assets/fondos-tarjetas/tarjeta-cooming.png');">
 
         <a (click)="consola(i)">
             <p class="tarjeta_name">{{ item.name }}</p>
-            <img [src]= "item.funkoImage"> 
+            <img [src]= "item.funkoImage">
 
             <p class="tarjeta_price"> ${{ item.price }}</p>
             <p class="info"> Cop/ Cu</p>
             <p class="tarjeta_stock">DISPONIBLES {{ item.stock }}</p>
         </a>
-            
+
     </div>
 </div>

@@ -1,9 +1,9 @@
 body{
     overflow-x: hidden;
 }
+
 .contenedor{
     text-align: center;
-    background-color: #8de6cd;
     width: 100%;
     height: 100vh;
     display: flex;
@@ -17,19 +17,18 @@ body{
     background: white;
     padding: 30px;
     border-radius: 15px;
-    font-family: 'Times New Roman', Times, serif;
-    border: 2px solid #000000;
+    font-family: 'Rubik', sans-serif;
     box-sizing: border-box;
-    box-shadow: 7px 13px 37px #000;
+    box-shadow: 30px 30px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
 .controls{
     width: 100%;
     height: 40px;
     border-radius: 6px;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     border: 1px solid black;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Rubik', sans-serif;
     font-size: 14px;
 
 }
@@ -50,15 +49,8 @@ body{
 }
 
 .insertar{
-    width: 343px;
-    height: 35px;
-    font-weight: 600;
-    font-size: 20px;
-    border-radius: 6px;
-    background-color: black;
-    color: #ffffff;
-    cursor: pointer;
-    text-align: center;
+    width: 60%;
+    font-family: 'Rubik', sans-serif;
 }
 
 .chulo-style{
@@ -83,28 +75,28 @@ img:hover {
 
 
 @media all and (min-width: 0px) and ( max-width: 1200px ) {
-  
+
 
     .naruto-img{
         display: none;
     }
 
     .contenedor{
-        justify-content: space-evenly;   
+        justify-content: space-evenly;
     }
  }
 
 
 
  @media all and (min-width: 0px) and ( max-width: 900px ) {
-  
+
 
     .pokemon-img{
         display: none;
     }
 
     .contenedor{
-        justify-content: space-evenly;   
+        justify-content: space-evenly;
     }
 
 
@@ -115,14 +107,14 @@ img:hover {
 
 
  @media all and (min-width: 0px) and ( max-width: 500px ) {
-    
+
     .contenedor{
         width: 100%;
     }
 
     .form-registro{
         width: 95%;
-    }   
+    }
 
 
 .boton-2{

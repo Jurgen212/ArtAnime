@@ -27,7 +27,7 @@ export class SharedComponent implements OnInit {
     { name: 'Buscar'               , path: 'home/personajes'            },
     { name: 'Carrito'              , path: 'home/carrito'               },
     { name: 'Próximamente'         , path: 'home/soon'                  },
-    { name: 'Iniciar sesión'       , path: 'home/login'                 },
+    { name: 'Login'                 , path: 'home/login'                 },
     { name: 'Contacto'             , path: 'home/contacto'              }
   ]
 }

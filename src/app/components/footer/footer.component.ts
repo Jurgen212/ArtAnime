@@ -17,6 +17,14 @@ export class FooterComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  integrantes = [
+    { nombre: 'Jurgen Sanclemente', url: 'https://github.com/Jurgen212'     },
+    { nombre: 'Sebastián Dosman'  , url: 'https://github.com/SebasDosman'   },
+    { nombre: 'Nicolás Ramírez'   , url: 'https://github.com/Trompitas'     },
+    { nombre: 'Juan Pablo Tascón' , url: 'https://github.com/juanpablotr14' },
+    { nombre: 'Mauricio Bonilla'  , url: ''  }
+  ]
+
   opciones: opcion[] = [
     { name: 'Colecciones'         , path: 'collections'     },
     { name: 'Figuras'             , path: 'home/personajes'},

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 nav.navbar {
    background-color: #8DE6CD;
    margin: 0;
@@ -6,14 +7,57 @@ nav.navbar {
    margin-bottom: 20px;
    padding: 50px;
 
+=======
+img{
+   width: 80px;
+}
+
+
+nav{
+   background-color: #8de6cd !important;
+}
+
+
+a{
+   color: rgb(24, 16, 53) !important;
+   text-decoration: none                  !important;
+   font-family: 'Rubik', sans-serif       !important;
+   font-weight    : 600                   !important;
+   font-size      : 18px                  !important;
+   padding        : 10px 5px              !important;
+}
+
+
+.nav-link{
+   position    : relative;
+}
+
+
+.nav-link::after{
+   content           : ''              ;
+   opacity           : 0               ;
+   transition        : all 0.2s        ;
+   height            : 2px             ;
+   width             : 100%            ;
+   background-color  : rgb(25, 40, 1);
+   position          : absolute        ;
+   bottom            : 0               ;
+   left              : 0               ;
+}
+
+
+.nav-link:hover::after{
+   opacity           : 1;
+>>>>>>> pruebas-diseno
 }
 
 
 
 
-.item:hover{
-   border-bottom: 1px solid beige;
+.nav-item{
+   margin-right: 25px;
 }
+<<<<<<< HEAD
 
 /* Dispositivos muy grandes */
 @media all and (min-width: 1000px ) {
@@ -134,3 +178,5 @@ nav.navbar {
 
 
 
+=======
+>>>>>>> pruebas-diseno

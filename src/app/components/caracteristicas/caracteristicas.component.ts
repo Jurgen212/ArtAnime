@@ -13,7 +13,7 @@ import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
 export class CaracteristicasComponent implements OnInit {
 
   mostrar_chulo = false;
-  constructor(  private buscarServ: BuscarService, 
+  constructor(  private buscarServ: BuscarService,
                 private router: Router,
                 private StockServ: StockService,
                 private fb       : FormBuilder ) {}
@@ -41,7 +41,7 @@ export class CaracteristicasComponent implements OnInit {
     }
 
     this.cargarCalificacionFunko();
-    
+
   }
 
   cargarCalificacionFunko(){
@@ -78,11 +78,11 @@ export class CaracteristicasComponent implements OnInit {
     arreglo_funkos.push( funkoAñadir );
     localStorage.setItem("carrito", JSON.stringify( arreglo_funkos ));
     this.mostrar_chulo = true;
-    setInterval( () => this.mostrar_chulo = false, 1000); 
-    
+    setInterval( () => this.mostrar_chulo = false, 1000);
+
   }
 
-  
+
   añadirAlArregloExistenteCarrito( funkoAñadir: funko ){
 
     if( this.conocerSiYaExisteProductoEnCarrito( funkoAñadir ) ){
@@ -100,7 +100,7 @@ export class CaracteristicasComponent implements OnInit {
     if( this.devolverArregloCarrito()?.length! > 0 ){
 
       for( let i = 0; i < this.devolverArregloCarrito()?.length!; i++ ){
-        
+
         if( funkoAñadir.name == this.devolverArregloCarrito()![i].name && funkoAñadir.stock == this.devolverArregloCarrito()![i].stock ){
           this.yaExisteEnLocal = true;
           return false;
@@ -118,15 +118,15 @@ export class CaracteristicasComponent implements OnInit {
 
   anadirAlCarrito( funkoAñadir: funko ){
 
-    
+
     if( this.validador() ){
-      this.añadirAlArregloExistenteCarrito( funkoAñadir ) 
+      this.añadirAlArregloExistenteCarrito( funkoAñadir )
       this.mostrar_chulo = true;
       setInterval( () => this.mostrar_chulo = false, 1000);
     }
     else{
       this.crearArregloCarrito( funkoAñadir );
-    } 
+    }
   }
 
   miFormulario: FormGroup = this.fb.group({
@@ -136,11 +136,11 @@ export class CaracteristicasComponent implements OnInit {
 
   enviarCalificacion(){
     if( this.validarSiLaCalificacionLocalEsNull() ){
-      
+
     }
     else{
       console.log( this.miFormulario.value.opcionSeleccionada );
-      
+
       this.nuevaCalificacion = ( this.miFormulario.value.opcionSeleccionada + this.funko_mostrar.stars ) / 2;
       this.funko_mostrar.stars = this.nuevaCalificacion;
       this.calificacion = Math.round( this.funko_mostrar.stars );
@@ -168,7 +168,7 @@ export class CaracteristicasComponent implements OnInit {
     }
   };
 
-  
+
 
   validarSiLaCalificacionLocalEsNull(){
     if( this.miFormulario.value.opcionSeleccionada == null ){
@@ -178,7 +178,7 @@ export class CaracteristicasComponent implements OnInit {
     else{
       this.isNullCalificacion = false;
       return false;
-    } 
+    }
   }
 
 
@@ -186,7 +186,7 @@ export class CaracteristicasComponent implements OnInit {
 
   conocerPromocion(): boolean {
     if( this.funko_mostrar.promo != 0 &&  this.funko_mostrar.nCa != null ){
-      
+
       this.darValorPorcentajeDescuento();
       return true;
     }

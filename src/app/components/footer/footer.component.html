@@ -1,6 +1,7 @@
 
 <footer>
     <!-- Contenedor con los 3 bloques de color rojo, blanco y azul -->
+<<<<<<< HEAD
     <div class="contenedor-principal-1 text-center">
 
         <div class="contenedor-1-1">
@@ -19,10 +20,33 @@
             <p class="contenedor-1-1-title">Contáctanos</p>
             <p><br> Jurgen Sanclemente <a href="https://github.com/Jurgen212" target="_blank"> <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png"> </a><br>Nicolas Ramirez  <a href="https://github.com/Trompitas" target="_blank"><img  src="https://cdn-icons-png.flaticon.com/512/25/25231.png" ></a> <br>Juan Pablo Tascon <br>Mauricio Bonilla <br>Nicolas Gonzales</p>
         </div>
+=======
 
+    <div class="integrantes">
+
+        <span>Integrantes</span>
+        <ul>
+            <li *ngFor="let item of integrantes"
+                class="list-item">
+                <p>{{ item.nombre }}</p>
+>>>>>>> pruebas-diseno
+
+                <a *ngIf="item.url.length > 0" [href]="item.url">
+                    <img    src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
+                            class="img-github">
+                </a>
+            </li>
+        </ul>
     </div>
 
+    <div class="opciones">
+        <img    src="../../../assets/agua-pok.png"
+                class="imagen-pokemon">
+        <ul class="list-options navbar-nav mb-2 mb-lg-0">
+            <li *ngFor="let item of opciones"
+                class="nav-item">
 
+<<<<<<< HEAD
     <!-- Contenedor de la barra que hay abajo de la pagina -->
     <div class="contenedor-principal-2">
 
@@ -36,5 +60,12 @@
                 {{ item.name }}
             </a>
         </div>
+=======
+                <a [routerLink]="item.path"
+                  class="nav-link active"
+                  aria-current="page">{{ item.name }}</a>
+            </li>
+        </ul>
+>>>>>>> pruebas-diseno
     </div>
 </footer>

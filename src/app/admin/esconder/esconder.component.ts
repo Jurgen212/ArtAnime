@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { StockService } from '../../services/stock.service';
 import { funko } from '../../interface';
 
+
 @Component({
   selector: 'app-esconder',
   templateUrl: './esconder.component.html',

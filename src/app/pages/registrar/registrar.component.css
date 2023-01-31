@@ -1,9 +1,9 @@
 span{
   color: red;
 }
+
 .contenedor{
     height: 1000px;
-    background-color: #8de6cd;
     text-align: center;
     width: 100%;
     display: flex;
@@ -12,18 +12,17 @@ span{
     align-items: center;
 }
 
-.registro{
+#registro{
     width: 100%;
 }
 
 .Email{
-    
+
     border-radius: 8px;
 }
 
 input{
     color:rgb(109, 109, 109);
-
     width: 20vw;
     height: 40px;
     border: 1px solid black;
@@ -34,14 +33,7 @@ input{
 }
 
 .singup{
-    width: 100%;
-    height: 80%;
-    font-size: 20px;
-    border-radius: 6px;
-    background-color: black;
-    color: #ffffff;
-    cursor: pointer;
-    text-align: center;
+    width: 60%;
 }
 
 h2{
@@ -51,25 +43,26 @@ h2{
 }
 
 table{
-    width: 10vw;
-    height: 60vh;
-    font-family: 'Times New Roman', Times, serif;
-    background-color: #ffffff;
-    border: 2px solid #000000;
+  width: 30vw;
+  height: 60vh;
+  font-family: 'Rubik', sans-serif;
+  background-color: #ffffff;
+  box-shadow: 30px 30px 15px -3px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
 }
 
 th{
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Rubik', sans-serif;
     text-align:justify;
     padding: 8px;
 }
 
 td{
     width: 100%;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Rubik', sans-serif;
     text-align: center;
     align-items: center;
-    padding: 8px;
+    padding-top: 10px;
 }
 
 tr{
@@ -89,7 +82,7 @@ img:hover {
     width: 100%;
     height: 150vh;
     backdrop-filter: blur(5px);
-    
+
 }
 
 .cookie {
@@ -106,7 +99,7 @@ img:hover {
     -webkit-transform-origin: 50% 100%;
             transform-origin: 50% 100%;
   }
-  
+
   .cookie .piece {
     fill: #f6a976;
     stroke-width: 0.5;
@@ -115,17 +108,17 @@ img:hover {
     width: 6px;
     height: 6px;
   }
-  
+
   .cookie .piece.left {
     top: 15px;
     left: 4px;
   }
-  
+
   .cookie .piece.right {
     top: 15px;
     right: 4px;
   }
-  
+
   .cookie .top,
   .cookie .bottom {
     display: block;
@@ -136,28 +129,28 @@ img:hover {
     position: relative;
     z-index: 1;
   }
-  
+
   .cookie .top .background,
   .cookie .bottom .background {
     fill: #f6a976;
   }
-  
+
   .cookie .top .shine,
   .cookie .bottom .shine {
     fill: #ffdaae;
   }
-  
+
   .cookie .top .dark,
   .cookie .bottom .dark {
     fill: #a96249;
   }
-  
+
   .cookie .top .border,
   .cookie .bottom .border {
     fill: none;
     stroke: #d5906e;
   }
-  
+
   .cookie .top .crack,
   .cookie .bottom .crack {
     fill: none;
@@ -166,7 +159,7 @@ img:hover {
     stroke-dasharray: 38px;
     stroke-dashoffset: var(--crack-offset);
   }
-  
+
   .cookie .top {
     position: absolute;
     left: 0;
@@ -174,21 +167,21 @@ img:hover {
     -webkit-transform: translateY(var(--top-y));
             transform: translateY(var(--top-y));
   }
-  
+
   .cookie .eye {
     top: 14px;
     position: absolute;
     z-index: 2;
   }
-  
+
   .cookie .eye.left {
     left: 9px;
   }
-  
+
   .cookie .eye.right {
     right: 9px;
   }
-  
+
   .cookie .eye svg {
     display: block;
     width: 10px;
@@ -197,7 +190,7 @@ img:hover {
     stroke: #000;
     stroke-width: 0.75;
   }
-  
+
   .cookie .eye:after {
     content: "";
     left: 50%;
@@ -210,7 +203,7 @@ img:hover {
     border-radius: 2px;
     background-color: #000;
   }
-  
+
   .cookie .mouth {
     width: 12px;
     height: 9px;
@@ -225,10 +218,10 @@ img:hover {
     -webkit-transform: translateY(var(--mouth-y));
             transform: translateY(var(--mouth-y));
   }
-  
+
   .banner {
     position: absolute;
-    top: 20%; 
+    top: 20%;
     left: 35%;
     width: 430px;
     background-color: #252731;
@@ -244,7 +237,7 @@ img:hover {
     -webkit-box-shadow: 0px 1px 3px rgba(9, 10, 15, 0.25), 0px 4px 16px rgba(9, 10, 15, 0.1), 0px 8px 24px rgba(9, 10, 15, 0.1), inset 0px 1px 1px #323543;
             box-shadow: 0px 1px 3px rgba(9, 10, 15, 0.25), 0px 4px 16px rgba(9, 10, 15, 0.1), 0px 8px 24px rgba(9, 10, 15, 0.1), inset 0px 1px 1px #323543;
   }
-  
+
   @media (min-width: 601px) {
     .banner {
       -webkit-box-align: center;
@@ -252,14 +245,14 @@ img:hover {
               align-items: center;
     }
   }
-  
+
   .banner .content {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     gap: 24px;
   }
-  
+
   @media (min-width: 601px) {
     .banner .content {
       -webkit-box-align: center;
@@ -267,7 +260,7 @@ img:hover {
               align-items: center;
     }
   }
-  
+
   @media (max-width: 600px) {
     .banner .content {
       -webkit-box-orient: vertical;
@@ -277,14 +270,14 @@ img:hover {
       gap: 16px;
     }
   }
-  
+
   .banner .content .list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     gap: 12px;
   }
-  
+
   .banner .content .list button {
     -webkit-appearance: none;
        -moz-appearance: none;
@@ -305,23 +298,23 @@ img:hover {
     margin: 0;
     -webkit-transition: background-color 0.2s;
     transition: background-color 0.2s;
-    
+
   }
-  
+
   .banner .content .list button:hover {
     background-color: #323543;
   }
-  
+
   .banner .content .list button.muted {
     background: none;
     -webkit-box-shadow: inset 0 0 0 1px #353744;
             box-shadow: inset 0 0 0 1px #353744;
   }
-  
+
   .banner .content .list button.muted:hover {
     background-color: #292b36;
   }
-  
+
   body {
     min-height: 100vh;
     display: -webkit-box;
@@ -335,18 +328,18 @@ img:hover {
         -ms-flex-align: center;
             align-items: center;
   }
-  
+
   a{
     color: black;
   }
-  
+
   body .twitter {
     position: fixed;
     display: block;
     right: 12px;
     bottom: 12px;
   }
-  
+
   body .twitter svg {
     width: 32px;
     height: 32px;
@@ -360,7 +353,7 @@ img:hover {
 
 
 @media all and (min-width: 0px) and ( max-width: 1200px ) {
-    
+
     .contenedor{
         height: 1000px;
     }
@@ -371,8 +364,8 @@ img:hover {
     table{
         width: 40vw;
     }
-        
-    
+
+
     tr{
         width: 100vw;
     }
@@ -386,7 +379,7 @@ img:hover {
 
 
  @media all and (min-width: 0px) and ( max-width: 780px ) {
-   
+
     .contenedor{
         height: 800px ;
     }
@@ -399,16 +392,16 @@ img:hover {
         width: 60vw;
     }
 
-    
+
  }
 
 
 
  @media all and (min-width: 0px) and ( max-width: 450px ) {
-   
+
     .contenedor{
         height: 700px ;
-        
+
     }
 
     .img-decoracion-2{
@@ -418,7 +411,7 @@ img:hover {
     table{
         width: 90vw;
     }
- 
+
  }
 
  input{

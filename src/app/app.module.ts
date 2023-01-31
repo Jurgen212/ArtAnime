@@ -13,6 +13,7 @@ import { RouterModule } from '@angular/router';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { SoonPipe } from './pipes/soon.pipe';
 import { SoonCoomingComponent } from './components/soon-cooming/soon-cooming.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -26,7 +27,8 @@ import { SoonCoomingComponent } from './components/soon-cooming/soon-cooming.com
     AppRoutingModule,
     BrowserModule,
     RouterModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule
   ],
 
   providers: [

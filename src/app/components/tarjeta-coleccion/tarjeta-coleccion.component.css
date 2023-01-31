@@ -1,5 +1,11 @@
+.tittle {
+  color: #fff;
+  text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+}
+
 
 .contenedor{
+  margin-top: 0;
     width: 100%;
     height: 70vh;
     display: flex;
@@ -10,51 +16,51 @@
 }
 
 
-.tarjeta1{            
+.tarjeta1{
     color: white;
     width: 20vw;
     height: 60vh;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Rubik', sans-serif;
     background-image: url('/assets/tarjetas-colecciones/tierra.png');
-    border: 1px solid #000000;
+    box-shadow: 30px 30px 15px -3px rgba(0, 0, 0, 0.1);
     border-radius: 30px;
     cursor: pointer;
 }
 
 
 .tarjeta1 img{
-    width: 90%; 
+    width: 90%;
     position: relative;
     right: -30%;
     bottom: -50%;
-    cursor: pointer; 
+    cursor: pointer;
 }
 
 
 .tarjeta2 img{
-    width: 90%; 
+    width: 90%;
     position: relative;
     right: -30%;
-    bottom: -50%;   
-    cursor: pointer; 
+    bottom: -50%;
+    cursor: pointer;
 
 }
 
 .tarjeta3 img{
-    width: 90%; 
+    width: 90%;
     position: relative;
     right: -30%;
     bottom: -50%;
-    cursor: pointer; 
+    cursor: pointer;
 }
 
 .tarjeta2{
     color: white;
     width: 20vw;
     height: 60vh;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Rubik', sans-serif;
     background-image: url('/assets/tarjetas-colecciones/agua.png');
-    border: 1px solid #000000;
+    box-shadow: 30px 30px 15px -3px rgba(0, 0, 0, 0.1);
     border-radius: 30px;
     cursor: pointer;
 }
@@ -63,10 +69,10 @@
     color: white;
     width: 20vw;
     height: 60vh;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Rubik', sans-serif;
     background-image: url('/assets/tarjetas-colecciones/aire2.png');
     background-size: cover;
-    border: 1px solid #000000;
+    box-shadow: 30px 30px 15px -3px rgba(0, 0, 0, 0.1);
     border-radius: 30px;
     cursor: pointer;
 }
@@ -77,11 +83,16 @@
     margin-left: 15%;
 }
 
+.linea_inicial{
+    width: 70%;
+    margin-left: 15%;
+}
+
 /* Animaciones */
 
 img:hover {
     -webkit-transform:scale(1.7);
-    transform:  scale(1.7);
+    transform:  scale(1.1);
     transition-duration: .5s;
 }
 

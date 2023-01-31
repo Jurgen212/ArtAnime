@@ -1,66 +1,66 @@
-<div class="contenedor">  
+<div class="contenedor">
     <div id="Imagenes">
-        <img src="assets/login-img/naruto-header.png" alt="NarutoHeather" class="img-decoracion-1" style="float:left; width:550px; height:650px;">
+        <img src="assets/login-img/naruto-header.png" alt="NarutoHeather" class="img-decoracion-1" style="float:left; width:450px; height:550px;">
     </div>
     <form autocomplete="off" [formGroup]="miFormulario" (ngSubmit)="guardar()">
-            <div id="registro"> 
+            <div id="registro">
                 <table>
-                    
+
                     <tbody><tr>
                       <th> <a routerLink="/home/"><img src="assets/login-img/volver.png" height="25" width="25"></a> </th>
                     </tr>
-                    
+
                     <tr>
-                        <td> <h2>Iniciar sesión</h2> </td>
-                        
+                        <td> <h2 style="font-weight: 600;">Iniciar Sesión</h2> </td>
                     </tr>
-                    
+
                     <span *ngIf="dataIncorrecta">Ingrese bien los datos por favor</span>
+                    
                     <tr>
-                        <td> <input 
-                                    type="email" 
-                                    id="mail" 
-                                    class="Email" 
+                        <td> <input
+                                    type="email"
+                                    id="mail"
+                                    class="Email"
                                     placeholder="Nombre usuario"
-                                    formControlName="usuario"> 
+                                    formControlName="usuario">
                         </td>
                     </tr>
 
                     <tr>
                         <td></td>
                     </tr>
-    
+
                     <tr>
-                        <td> <input type="password" 
-                                    id="contra" 
-                                    class="contraseña" 
+                        <td> <input type="password"
+                                    id="contra"
+                                    class="contraseña"
                                     placeholder="Contraseña"
                                     formControlName="contraseña">  </td>
                     </tr>
-                    
+
                     <tr>
                         <td></td>
                     </tr>
 
                     <tr>
-                        <td> <button type="submit" class="singup">Ingresar </button></td>
+                        <td> <button type="submit" class="singup btn btn-dark btn-lg">Ingresar </button></td>
                     </tr>
-                    <tr> 
+                    <tr>
                         <td>
                             <a routerLink="/home/registrar">¿No tienes cuenta? Regístrate</a>
                         </td>
                     </tr>
-    
+
                     <tr>
                         <td></td>
                     </tr>
-    
+
                 </tbody>
             </table>
             </div>
     </form>
     <div id="Imagenes">
-        <img src="assets/login-img/pokemon-header.png" alt="pokemon-header" class="img-decoracion-2" style="float:left; width:450px; height:350px;">            
+        <img src="assets/login-img/pokemon-header.png" alt="pokemon-header" class="img-decoracion-2" style="float:left; width:450px; height:350px;">
     </div>
 
 </div>

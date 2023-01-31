@@ -1,66 +1,63 @@
+<div class="contenedor_todo text-center" *ngIf="sesionIniciada">
 
-<div class="contenedor_todo" *ngIf="sesionIniciada">
+  <button class="close btn btn-dark btn-lg" (click)="cerrarSesion()">Cerrar sesión</button>
 
-<button class="close" (click)="cerrarSesion()">Cerrar sesión</button>
+  <div class="container" *ngIf="funkosEnCarrito.length != 0 && !partePagos && !parteEnvios">
 
-<div class="container" *ngIf="funkosEnCarrito.length != 0 && !partePagos && !parteEnvios">
-    
-    <h1>Carrito de {{ nombreUsuario }}</h1>
+    <h1 style="color: white;">Carrito de {{ nombreUsuario }}</h1>
     <div class="lista_container">
-        <ol>
-            <li *ngFor="let item of funkosEnCarrito; let i = index">
-                
-                <div *ngIf="item != null" class="contenedor_li">
-                    
-                    <div class="imagen_container">
-                        <img [src]="item.funkoImage">
-                    </div>
-                    <p>{{ item.name }}</p>
-                    <p>${{  conocerPrecio(i) }}</p>
-                    <p>Stock: {{ item.stock }}</p>
-                    <small>{{ item.coleccion | Soon }}</small>
-                    <div class="input_container">
-                        <button class="boton_input"
-                                (click)="actualizarCantidadSeleccionada( i, true )"
-                                >+</button>
+      <ol>
+        <li *ngFor="let item of funkosEnCarrito; let i = index">
 
-                        <input type="number" [value]= "cantidadesSeleccionadas[i]" min="1" max="10" readonly >
+          <div *ngIf="item != null" class="contenedor_li">
 
-                        <button class="boton_input" 
-                                (click)="actualizarCantidadSeleccionada( i, false )">-</button>
-                    </div>
-                    
-                    <button class="remover_button"
-                            (click)="remover_elemento( i )">Remover</button>
-                </div>
-            </li>
-        </ol>
+            <div class="imagen_container">
+              <img [src]="item.funkoImage">
+            </div>
+            <p>{{ item.name }}</p>
+            <p>${{ conocerPrecio(i) }}</p>
+            <p>Stock: {{ item.stock }}</p>
+            <small>{{ item.coleccion | Soon }}</small>
+            <div class="input_container">
+              <button class="boton_input" (click)="actualizarCantidadSeleccionada( i, true )">+</button>
+
+              <input type="number" [value]="cantidadesSeleccionadas[i]" min="1" max="10" readonly>
+
+              <button class="boton_input" (click)="actualizarCantidadSeleccionada( i, false )">-</button>
+            </div>
+
+            <button class="remover_button" (click)="remover_elemento( i )">Remover</button>
+          </div>
+        </li>
+      </ol>
     </div>
 
     <div class="container_datos">
-        <div class="container_total">
+      <div class="container_total">
 
-            <p class="total"><span class="span_total">Total (COP) $</span>{{ generarTotal() }}</p>
-        </div>
-        <div class="comprar">
+        <p class="total"><span class="span_total">Total (COP) $</span>{{ generarTotal() }}</p>
+      </div>
+      <div class="comprar">
 
-            <button class="boton_comprar" (click)="cambiarVentanaAEnvio()">Comprar</button>
-        </div>
+        <button class="boton_comprar" (click)="cambiarVentanaAEnvio()">Comprar</button>
+      </div>
     </div>
 
-</div>
+  </div>
 
-<div class="container" *ngIf="funkosEnCarrito.length == 0 && !partePagos && !parteEnvios">
-    <h1>Por favor añada algún producto {{ nombreUsuario }} </h1>
-    <h6>Aquí podrá visualizar lo que añada al carrito</h6>
+  <div class="container text-center mt-2" *ngIf="funkosEnCarrito.length == 0 && !partePagos && !parteEnvios">
+    <h1 style="color: white; font-family: 'Rubik', sans-serif; font-weight: 600;" class="tittle">Por favor añada algún producto {{
+      nombreUsuario }} </h1>
+    <h6 style="color: white; font-family: 'Rubik', sans-serif;">Aquí podrá visualizar lo que añada al carrito</h6>
     <hr>
-</div>
+  </div>
 
 
-<!-- Seleccionar envio  -->
-<form [formGroup]="formularioEnvio" *ngIf="parteEnvios && !partePagos" autocomplete="off" id="myform">
+  <!-- Seleccionar envio  -->
+  <form [formGroup]="formularioEnvio" *ngIf="parteEnvios && !partePagos" autocomplete="off" id="myform">
     <header>Información del envío para {{ nombreUsuario }}</header>
-    <span *ngIf="dataEnvioIncorrecta">Los campos de nombre, apellidos, numero de telefono, direccion son obligatorios, tambien selecciona metodo de envio </span>
+    <span *ngIf="dataEnvioIncorrecta">Los campos de nombre, apellidos, numero de telefono, direccion son obligatorios,
+      tambien selecciona metodo de envio </span>
 
     <div class="area">
 
@@ -79,118 +76,100 @@
           <input type="number" name="phone" id="phone" formControlName="cell" class="input_e">
           <label for="phone" class="label_e">Número de teléfono</label>
         </div>
-  
+
         <div class="row">
           <input type="text" name="address" id="address" formControlName="direccion" class="input_e">
           <label for="address" class="label_e">Dirección</label>
         </div>
-  
+
         <div class="row">
           <input type="text" name="address" id="address" class="input_e" formControlName="especificacion">
           <label for="address" class="label_e">Especificaciones (#apt,conjunto, etc)(opcional)</label>
         </div>
-  
+
         <div class="row">
           <select type="text" name="address" id="address" formControlName="options" (change)="generarTotalEnvio()">
-            <option *ngFor="let item of opcionesEnvios;let i = index">{{ item }}</option>  
+            <option *ngFor="let item of opcionesEnvios;let i = index">{{ item }}</option>
           </select>
-        
+
           <label for="address" class="label_e">Metodo de envío</label>
         </div>
-      
-    
-      
-      <div class="row">
-        <button type="submit" class="btn btn-primary" (click)="enviarDataEnvio()">Continuar</button> <label for="total"> Total: {{ totalConEnvio }}</label>
-      </div>
+
+
+
+        <div class="row">
+          <button type="submit" class="btn btn-primary" (click)="enviarDataEnvio()">Continuar</button> <label
+            for="total"> Total: {{ totalConEnvio }}</label>
+        </div>
 
       </div>
     </div>
-</form>
-    
+  </form>
 
 
 
-<!-- Parte de pagos -->
 
-<div class = "Contenedor_p" *ngIf="partePagos && !parteEnvios" [formGroup]="miFormulario">
+  <!-- Parte de pagos -->
 
-    <div class = "Tarjeta_p">
+  <div class="Contenedor_p" *ngIf="partePagos && !parteEnvios" [formGroup]="miFormulario">
 
-        <p class = "TarjetaActual_p">Tarjeta Actual</p>
+    <div class="Tarjeta_p">
 
-        <div class = "Card_p">
+      <p class="TarjetaActual_p">Tarjeta Actual</p>
 
-            <img class="imagen_p" src="assets/visa.png" height="35" width="34">
-            <p class = "codigo_p">**** **** *** ****</p>
-            <p class = "nombre_p">{{ informacionFormulario }}</p>
+      <div class="Card_p">
 
-        </div>
+        <img class="imagen_p" src="assets/visa.png" height="35" width="34">
+        <p class="codigo_p">**** **** *** ****</p>
+        <p class="nombre_p">{{ informacionFormulario }}</p>
 
-        <div class = "Formulario_p">
-            <span *ngIf="dataPagoIncorrecta">Por favor ingrese la informacion correcta ( el numero de la tarjeta tiene minimo 15 caracteres y el ccv minimo 3 )</span>
-            <p class = "name_p">Nombre</p>
+      </div>
 
-            <input  type = "text" 
-                    class = "controls_p" 
-                    id = "nombre" 
-                    formControlName="name"
-                    autocomplete="new-password"
-                    [(ngModel)] ="informacionFormulario ">
+      <div class="Formulario_p">
+        <span *ngIf="dataPagoIncorrecta">Por favor ingrese la informacion correcta ( el numero de la tarjeta tiene
+          minimo 15 caracteres y el ccv minimo 3 )</span>
+        <p class="name_p">Nombre</p>
 
-            <p class = "NumeroTarjeta_p">Numero de la Tarjeta</p>
+        <input type="text" class="controls_p" id="nombre" formControlName="name" autocomplete="new-password"
+          [(ngModel)]="informacionFormulario ">
 
-            <input  type = "number" 
-                    class = "controlNumero_p" 
-                    id = "NumeroTarjeta" 
-                    formControlName="number"
-                    autocomplete="new-password">
+        <p class="NumeroTarjeta_p">Numero de la Tarjeta</p>
 
-            <p class = "expiracion_p">Expiración</p>
+        <input type="number" class="controlNumero_p" id="NumeroTarjeta" formControlName="number"
+          autocomplete="new-password">
 
-            <input  type = "text" 
-                    class = "controlAbajo1_p" 
-                    id = "FechaExpedicion" 
-                    formControlName="expiration"
-                    autocomplete="new-password">
+        <p class="expiracion_p">Expiración</p>
 
-            <p class = "cvv_p">CVV</p>
+        <input type="text" class="controlAbajo1_p" id="FechaExpedicion" formControlName="expiration"
+          autocomplete="new-password">
 
-            <input  type = "number"
-                    class = "controlAbajo2_p" 
-                    id = "FechaExpedicion" 
-                    formControlName="ccv"
-                    autocomplete="new-password">
+        <p class="cvv_p">CVV</p>
 
-            <button type = "submit" class = "Pagar_p" (click)="realizarCompraFinal()">Realizar Pago</button>
+        <input type="number" class="controlAbajo2_p" id="FechaExpedicion" formControlName="ccv"
+          autocomplete="new-password">
 
-            <button type = "submit" class = "Cancelar_p" (click)="volverCarrito()">Cancelar</button>
+        <button type="submit" class="Pagar_p" (click)="realizarCompraFinal()">Realizar Pago</button>
+
+        <button type="submit" class="Cancelar_p" (click)="volverCarrito()">Cancelar</button>
 
 
-        </div>
+      </div>
 
 
     </div>
 
+  </div>
+
+
+  <img *ngIf="mostrarChulo" class="chulo-style" src="assets/verificaciones/chulo.png">
+
+
+
 </div>
 
-
-<img    *ngIf="mostrarChulo"
-        class="chulo-style"
-        src="assets/verificaciones/chulo.png">
-
-
-
+<div *ngIf="!sesionIniciada" class="container text-center">
+  <br>
+  <h1 style="color: white; font-family: 'Rubik', sans-serif;">Por favor <small><a routerLink="/home/login"> inicie
+        sesión </a></small></h1>
+  <hr>
 </div>
-
-<div *ngIf="!sesionIniciada" class="container">
-  <h1>Por favor inicie sesión aquí <small><a routerLink="/home/login"> iniciar sesión </a></small></h1>
-</div>
-
-
-
-       
-
-           
-
-            

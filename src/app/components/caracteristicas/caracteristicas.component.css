@@ -1,14 +1,56 @@
+table{
+  width: 35vw;
+  height: 50vh;
+  font-family: 'Rubik', sans-serif;
+  background-color: #ffffff;
+  box-shadow: 30px 30px 15px -3px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+}
+
+th{
+  font-family: 'Rubik', sans-serif;
+  text-align:justify;
+  padding: 8px;
+}
+
+td{
+  width: 80%;
+  font-family: 'Rubik', sans-serif;
+  text-align: center;
+  align-items: center;
+  padding: 8px;
+}
+
+tr{
+  width: 80%;
+}
+
+#registro {
+  width: 100%;
+}
+
+.preinformacion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tittle {
+  color: white;
+  font-weight: 600;
+  text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+}
 
 .container{
   display: flex;
   flex-direction: row;
   height: 100%;
+  font-family: 'Rubik', sans-serif;
 }
 
 .imagen-container{
   width: 60%;
   height: 95vh;
-  background-color: #8de6cd;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -20,7 +62,6 @@
   flex-direction: row-reverse;
   width: 90%;
   margin-top: 30px;
-  color: black;
 }
 
 .funko-advice{
@@ -31,6 +72,9 @@
 .nombre{
   font-size: 35px;
   font-weight: 600;
+  color: white;
+  font-weight: 600;
+  text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
 }
 
 .precio{
@@ -43,10 +87,13 @@
 .info-container{
   width: 40%;
   height: 80vh;
+  align-items: center;
+  justify-content: center;
 }
+
 .espacio{
-  height: 40%;
-  width: 100%; 
+  height: 18%;
+  width: 100%;
 }
 
 .chulo-style{
@@ -69,6 +116,7 @@
 }
 
 .informacion-cell{
+  width: 80%;
   margin-top: 20px;
   border-bottom: 1px solid black;
 }
@@ -77,18 +125,8 @@
   display: flex;
   flex-direction: row;
   width: 100%;
-  justify-content: space-between;
-}
-
-button{
-  background-color: white;
-  border: none;
-  border-radius: 20px;
-  width: 150px;
-  height: 50px;
-  font-weight: 800;
-  color: black;
-  margin-right: 10%;
+  justify-content: center;
+  align-items: center;
 }
 
 img{
@@ -112,26 +150,18 @@ img{
 }
 
 #calification-box{
-  background-color: #8de6cd;
   width: 50%;
-  height: 50px;
+  height: 35px;
   border: none;
   margin-bottom: 20px;
   border-radius: 20px;
+  border: 1px solid;
 }
 
-.send-calification{
-  width: 35%;
-  height: 40px;
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 12px;
-  background-color: #8de6cd;
-  border: 1px solid black;
+.btn {
+  font-family: 'Rubik', sans-serif;
   margin-bottom: 20px;
-}
-
-.send-calification:hover{
-  background-color: aliceblueww;
+  font-size: inherit;
 }
 
 .contenedor-calificacion{
