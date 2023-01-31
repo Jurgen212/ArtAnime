@@ -22,7 +22,7 @@ export class FooterComponent implements OnInit {
     { nombre: 'Sebastián Dosman'  , url: 'https://github.com/SebasDosman'   },
     { nombre: 'Nicolás Ramírez'   , url: 'https://github.com/Trompitas'     },
     { nombre: 'Juan Pablo Tascón' , url: 'https://github.com/juanpablotr14' },
-    { nombre: 'Nicolás Gonzales' , url: ''  }
+    { nombre: 'Mauricio Bonilla'  , url: ''  }
   ]
 
   opciones: opcion[] = [
